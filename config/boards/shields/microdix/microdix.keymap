@@ -141,5 +141,14 @@
 			>;
 		};
 
+		sft_sym_layer {
+			bindings = <
+				&none		&none		&none		&kp FR_LBRC		&kp FR_RBRC				&none		&none		&none		&none		&none
+				&none		&none		&none		&kp FR_LPRN		&kp FR_RPRN				&none		&none		&none		&none		&none
+				&none		&none		&none		&kp FR_LCBR		&kp FR_RCBR				&none		&none		&none		&none		&none
+										&none		&none			&none					&none		&none		&none
+			>;
+		};
+
 	};
 };
