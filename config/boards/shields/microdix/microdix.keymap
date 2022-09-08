@@ -66,14 +66,14 @@
 			>;
 		};
 		
-			num_layer {
-		bindings = <
-	    &kp EXCL	&kp AT					&kp LBKT	&kp RBKT	&kp GRAVE			&kp KP_MULTIPLY	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_MINUS
-	    &kp HASH	&mt LA(LS(AT)) DOLLAR	&kp LPAR	&kp RPAR	&kp TILDE			&kp PLUS		&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_N0
-	    &kp PERCENT	&kp AMPS				&kp LBRC	&kp RBRC	&kp PIPE			&kp EQUAL		&kp KP_N1	&kp KP_N2	&kp KP_N3	&mt LS(SEMI) SEMI
-	    					                &trans		&trans		&trans 				&trans			&kp UNDER		&trans
-		>;
-        };
+		nav_layer {
+			bindings = <
+				&kp LC(FR_Z)		&kp LS(DEL)			&kp LC(INS)			&kp LS(INS)			&mt FR_G LC(LS(FR_Z))		&none				&kp HOME			&kp UP_ARROW			&kp END				&none
+				&mt LMETA FR_A		&mt LALT FR_R		&mt LCTRL FR_S		&mt LSHFT FR_T		&kp FR_D 					&kp FR_H			&mt RSHFT FR_N		&mt RCTRL FR_E			&mt RALT FR_I		&mt RMETA FR_U
+				&lt LYR_LCK FR_Z	&kp FR_X			&mt FR_CCED FR_C	&kp FR_V			&kp FR_B 					&kp FR_K			&kp FR_M 			&kp FR_COMM				&kp FR_SCLN			&kp FR_COLN
+														&lt MEDIA ESC 		&lt NAV SPACE		&lt MOUSE TAB				&lt NUM ENTER		&lt SYM BSPC		&lt FUN DEL
+			>;
+		};
 		
 			arrow_layer {
 		bindings = <
