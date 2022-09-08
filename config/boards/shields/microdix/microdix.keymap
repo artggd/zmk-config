@@ -155,7 +155,7 @@
 				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
 				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
 				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
-										&to MEDIA 		&to NAV		&to MOUSE 				&to NUM		&to SYM		&to FUN DEL
+										&to MEDIA 		&to NAV		&to MOUSE 				&to NUM		&to SYM		&to FUN
 			>;
 		};
 
