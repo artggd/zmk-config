@@ -125,7 +125,7 @@
 
 		sym_layer {
 			bindings = <
-				&kp FR_TILD				&kp FR_PERC		&kp FR_CIRC		&kp FR_UNDS		&squarebrackets				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
+				&kp FR_TILD				&kp FR_PERC		&kp FR_CIRC		&kp FR_UNDS		&none				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
 				&mt FR_PIPE FR_BSLS		&kp FR_AT		&kp FR_DLR 		&kp FR_MINS		&parentheses				&none				&mo SFT_SYM		&kp RCTRL		&kp RALT		&kp RMETA
 				&kp FR_HASH				&kp FR_AMPR		&kp FR_EURO		&kp FR_EQL		&curlybrackets				&none				&none			&none			&kp LALT		&to BASE
 														&kp FR_LABK		&kp FR_RABK		&none						&kp ENTER			&kp BSPC		&kp DEL
