@@ -150,12 +150,12 @@
 			>;
 		};
 
-		layer_lock_layer {
+		lyr_lck_layer {
 			bindings = <
-				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
-				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
-				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
-										&to MEDIA ESC 		&to NAV SPACE		&to MOUSE TAB				&to NUM ENTER		&to SYM BSPC		&to FUN DEL
+				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
+				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
+				&trans		&trans		&trans			&trans		&trans					&trans		&trans		&trans		&trans		&trans
+										&to MEDIA 		&to NAV		&to MOUSE 				&to NUM		&to SYM		&to FUN DEL
 			>;
 		};
 
