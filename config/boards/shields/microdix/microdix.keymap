@@ -8,9 +8,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
+#include "keymap_french.h"
+
+#define BASE       1
+#define NAV        4
+#define MOUSE      5
+#define MEDIA      6
+#define NUM        7
+#define SYM        8
+#define FUN        9
+#define SFT_SYM    10
+#define LAYER_LOCK 11
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <175>;
     flavor = "tap-preferred";
 };
 
@@ -26,58 +37,34 @@
 
 
 / { 
-        macros {
-	        eqarrw: eqarrw_macro {
-		        compatible = "zmk,behavior-macro";
-		        label = "EQARRW";
-		        #binding-cells = <0>;
-		        bindings = <&kp KP_EQUAL>, <&kp GT>;
-	        };
-	        dasharrw: dasharrw_macro {
-		        compatible = "zmk,behavior-macro";
-		        label = "DASHARRW";
-		        #binding-cells = <0>;
-		        bindings = <&kp KP_MINUS>, <&kp GT>;
-	        };
-	        trplgrv: trplgrv_macro {
-		        compatible = "zmk,behavior-macro";
-		        label = "TRPLGRV";
-		        #binding-cells = <0>;
-		        wait-ms = <1>;
-		        bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
-	        };
-        };
+	macros {
 
-        combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <20>;
-                key-positions = <15 16>;
-                bindings = <&kp ESC>;
-            };
-            combo_ent {
-                timeout-ms = <20>;
-                key-positions = <19 20>;
-                bindings = <&kp RET>;
-            };
-            combo_reset {
-                timeout-ms = <20>;
-                key-positions = <10 22>;
-                bindings = <&bt BT_CLR>;
-            };
-        };
+	};
 
-        keymap {
-            compatible = "zmk,keymap";
-            
-            default_layer {
-		bindings = <
-	    &kp Q		&kp W		&kp F			&mt LS(LG(N4)) P	&kp B	 			&kp J		&mt LC(LS(K_PWR)) L	&kp O		&mt LA(I) Y			&kp SQT
-	    &kp A		&kp R		&kp S			&kp T				&kp G	 			&kp H		&mt LA(E) N			&kp E		&mt LA(GRAVE) I		&kp U
-	    &mt LCTL Z	&mt LALT X	&mt LA(C) C		&kp D				&kp V	 			&kp K		&mt LA(U) M			&kp COMMA	&mt LA(SEMI) DOT	&mt BSLH FSLH
-	    								&kp LSHIFT	&mt LGUI BSPC	&mo 1		&mo 2	&mt BSPC SPACE	&mt RSHIFT TAB
-		>;
-        };
+	combos {
+
+	};
+	behaviors {
+		td_quote: tap_dance_mod_tap {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_DANCE_MOD_TAP";
+			#binding-cells = <10>;
+			tapping-term-ms = <175>;
+			bindings = <&mt FR_EXLM FR_DQUO>, <&kp FR_QUOT>;
+		};
+	};
+
+	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+			bindings = <
+				&kp FR_Q		&mt FR_CIRC FR_W	&mt LA(FR_ASTR) FR_F	&mt LA(FR_PLUS) FR_P	&mt FR_DIAE FR_G	 	&mt FR_DIAE FR_J	&mt LA(FR_PLUS) FR_L	&mt LA(FR_ASTR) FR_O	&mt FR_CIRC FR_Y	&td_quote
+				&kp A			&kp R				&kp S					&kp T					&kp G	 				&kp H				&mt LA(E) N				&kp E					&mt LA(GRAVE) I		&kp U
+				&mt LCTL Z		&mt LALT X			&mt LA(C) C				&kp D					&kp V	 				&kp K				&mt LA(U) M				&kp COMMA				&mt LA(SEMI) DOT	&mt BSLH FSLH
+													&kp LSHIFT				&mt LGUI BSPC			&mo 1					&mo 2				&mt BSPC SPACE			&mt RSHIFT TAB
+			>;
+		};
 		
 			num_layer {
 		bindings = <
