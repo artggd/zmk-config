@@ -10,15 +10,15 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "keymap_french.h"
 
-#define BASE       1
-#define NAV        4
-#define MOUSE      5
-#define MEDIA      6
-#define NUM        7
-#define SYM        8
-#define FUN        9
-#define SFT_SYM    10
-#define LAYER_LOCK 11
+#define BASE       0
+#define NAV        1
+#define MOUSE      2
+#define MEDIA      3
+#define NUM        4
+#define SYM        5
+#define FUN        6
+#define SFT_SYM    7
+#define LYR_LCK    8
 
 &mt {
     tapping-term-ms = <175>;
@@ -57,12 +57,12 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
+		base_layer {
 			bindings = <
-				&kp FR_Q			&mt FR_CIRC FR_W	&mt LA(FR_ASTR) FR_F	&mt LA(FR_PLUS) FR_P	&mt FR_DIAE FR_G	 	&mt FR_DIAE FR_J	&mt LA(FR_PLUS) FR_L	&mt LA(FR_ASTR) FR_O	&mt FR_CIRC FR_Y	&td_quote
-				&mt LMETA FR_A		&mt LALT FR_R		&mt LCTRL FR_S			&mt LSHFT FR_T			&kp FR_D 				&kp FR_H			&mt RSHFT FR_N			&mt RCTRL FR_E			&mt RALT FR_I		&mt RMETA FR_U
-				&mt LCTL Z			&mt LALT X			&mt LA(C) C				&kp D					&kp V	 				&kp K				&mt LA(U) M				&kp COMMA				&mt LA(SEMI) DOT	&mt BSLH FSLH
-														&kp LSHIFT				&mt LGUI BSPC			&mo 1					&mo 2				&mt BSPC SPACE			&mt RSHIFT TAB
+				&kp FR_Q			&mt FR_CIRC FR_W	&mt LA(FR_ASTR) FR_F	&mt LA(FR_PLUS) FR_P	&mt FR_DIAE FR_G		 	&mt FR_DIAE FR_J	&mt LA(FR_PLUS) FR_L	&mt LA(FR_ASTR) FR_O	&mt FR_CIRC FR_Y	&td_quote
+				&mt LMETA FR_A		&mt LALT FR_R		&mt LCTRL FR_S			&mt LSHFT FR_T			&kp FR_D 					&kp FR_H			&mt RSHFT FR_N			&mt RCTRL FR_E			&mt RALT FR_I		&mt RMETA FR_U
+				&lt LYR_LCK FR_Z	&kp FR_X			&mt FR_CCED FR_C		&kp FR_V				&kp FR_B 					&kp FR_K			&kp FR_M 				&kp FR_COMM				&kp FR_SCLN			&kp FR_COLN
+														&kp LSHIFT				&mt LGUI BSPC			&mo 1						&mo 2				&mt BSPC SPACE			&mt RSHIFT TAB
 			>;
 		};
 		
