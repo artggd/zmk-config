@@ -1,0 +1,11 @@
+file_format: "1"
+id: microdix
+name: "Microdix" 
+type: shield
+url: https://github.com/artggd
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - microdix_left
+  - microdix_right
