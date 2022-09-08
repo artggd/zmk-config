@@ -41,24 +41,7 @@
 
 / { 
 	macros {
-		parentheses: parentheses_macro {
-			compatible = "zmk,behavior-macro";
-			label = "PARENTHESES";
-			#binding-cells = <0>;
-			bindings = <&kp FR_LPRN>, <&kp FR_RPRN>, <&kp LEFT_ARROW>;
-		};
-		squarebrackets: squarebrackets_macro {
-			compatible = "zmk,behavior-macro";
-			label = "SQUAREBRACKETS";
-			#binding-cells = <0>;
-			bindings = <&kp FR_LBRC>, <&kp FR_RBRC>, <&kp LEFT_ARROW>;
-		};
-		curlybrackets: curlybrackets_macro {
-			compatible = "zmk,behavior-macro";
-			label = "CURLYBRACKETS";
-			#binding-cells = <0>;
-			bindings = <&kp FR_LCBR>, <&kp FR_RCBR>, <&kp LEFT_ARROW>;
-		};
+
 	};
 
 	combos {
