@@ -62,7 +62,7 @@
 				&kp FR_Q			&mt FR_CIRC FR_W	&mt LA(FR_ASTR) FR_F	&mt LA(FR_PLUS) FR_P	&mt FR_DIAE FR_G		 	&mt FR_DIAE FR_J	&mt LA(FR_PLUS) FR_L	&mt LA(FR_ASTR) FR_O	&mt FR_CIRC FR_Y	&td_quote
 				&mt LMETA FR_A		&mt LALT FR_R		&mt LCTRL FR_S			&mt LSHFT FR_T			&kp FR_D 					&kp FR_H			&mt RSHFT FR_N			&mt RCTRL FR_E			&mt RALT FR_I		&mt RMETA FR_U
 				&lt LYR_LCK FR_Z	&kp FR_X			&mt FR_CCED FR_C		&kp FR_V				&kp FR_B 					&kp FR_K			&kp FR_M 				&kp FR_COMM				&kp FR_SCLN			&kp FR_COLN
-														&kp LSHIFT				&mt LGUI BSPC			&mo 1						&mo 2				&mt BSPC SPACE			&mt RSHIFT TAB
+														&lt MEDIA ESC 			&lt NAV SPACE			&lt MOUSE TAB				&lt NUM ENTER		&lt SYM BSPC			&lt FUN DEL
 			>;
 		};
 		
