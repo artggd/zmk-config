@@ -125,7 +125,7 @@
 
 		num_layersss {
 			bindings = <
-				&kp FR_TILD		&none		&none		&none		&none					&kp LC(LS(FR_Z))	&kp LS(INS)			&kp LC(INS)			&kp LS(DEL)		&kp LC(FR_Z)
+				&kp FR_TILD		&kp FR_PERC		&none		&none		&none					&kp LC(LS(FR_Z))	&kp LS(INS)			&kp LC(INS)			&kp LS(DEL)		&kp LC(FR_Z)
 				&kp FR_PLUS		&kp KP_N4		&kp KP_N5 		&kp KP_N6 		&kp FR_ASTR 			&none				&kp RSHFT			&kp RCTRL			&kp RALT		&kp RMETA
 				&kp FR_MINS		&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp FR_SLSH				&none				&kp C_BRI_DN		&kp C_BRI_UP		&kp LALT		&to BASE
 												&kp FR_DOT		&kp KP_N0		&kp FR_EQL				&kp ENTER			&kp BSPC			&kp DEL
