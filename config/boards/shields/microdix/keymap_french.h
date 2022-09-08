@@ -49,7 +49,7 @@
 #define FR_K    K           // K
 #define FR_L    L           // L
 #define FR_M    SEMI        // M
-#define FR_UGRV KC_QUOT     // ù
+#define FR_UGRV SQT         // ù
 #define FR_ASTR NON_US_HASH // *
 // Row 4
 #define FR_LABK NON_US_BSLH // <
@@ -128,5 +128,5 @@
 #define FR_RBRC RA(FR_RPRN) // ]
 #define FR_RCBR RA(FR_EQL)  // }
 // Row 2
-#define FR_EURO RA(KC_E)   // €
+#define FR_EURO RA(E)   // €
 #define FR_CURR RA(FR_DLR) // ¤
