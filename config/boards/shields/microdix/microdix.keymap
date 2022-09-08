@@ -150,5 +150,14 @@
 			>;
 		};
 
+		layer_lock_layer {
+			bindings = <
+				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
+				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
+				&trans		&trans		&trans				&trans				&trans						&trans				&trans				&trans		&trans		&trans
+										&to MEDIA ESC 		&to NAV SPACE		&to MOUSE TAB				&to NUM ENTER		&to SYM BSPC		&to FUN DEL
+			>;
+		};
+
 	};
 };
