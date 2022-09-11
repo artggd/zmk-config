@@ -22,7 +22,7 @@
 
 &mt {
     tapping-term-ms = <175>;
-    flavor = "hold-preferred";
+    flavor = "tap-preferred";
 };
 
 &sk {
