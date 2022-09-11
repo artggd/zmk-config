@@ -70,7 +70,7 @@
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_MOD_TAP";
 			#binding-cells = <0>;
-			tapping-term-ms = <150>;
+			tapping-term-ms = <175>;
 			bindings = <&mt FR_EXLM FR_QUOT>, <&kp FR_DQUO>;
 		};
 	};
