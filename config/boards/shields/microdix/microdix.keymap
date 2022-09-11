@@ -31,8 +31,11 @@
 };
 
 &mmv {
-    acceleration-exponent=<1>;
     time-to-max-speed-ms = <100>;
+};
+
+&mwh {
+    acceleration-exponent=<1>;
 };
 
 &caps_word {
