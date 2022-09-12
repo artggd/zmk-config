@@ -137,7 +137,7 @@
 
 		fun_layer {
 			bindings = <
-				&kp F12		&kp F7		&kp F8		&kp F9		&none				&kp LC(LS(C_AC_PRINT))		&none			&none			&none		&none
+				&kp F12		&kp F7		&kp F8		&kp F9		&none				&kp LC(LS(C_AC_PRINT))	&none			&none			&none		&none
 				&kp F11		&kp F4		&kp F5		&kp F6		&none				&none					&kp RSHFT		&kp RCTRL		&kp RALT	&kp RMETA
 				&kp F10		&kp F1		&kp F2		&kp F3		&none				&none					&kp C_BRI_DN	&kp C_BRI_UP	&kp LALT	&to BASE
 										&none		&none		&none				&none					&none			&none
