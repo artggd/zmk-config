@@ -122,7 +122,7 @@
 				&kp RA(N7)		&kp FR_7		&kp FR_8		&kp FR_9		&kp FR_BSLS				&kp LC(LS(FR_Z))	&kp LS(INS)			&kp LC(INS)			&kp LS(DEL)		&kp LC(FR_Z)
 				&kp FR_PLUS		&kp FR_4		&kp FR_5 		&kp FR_6 		&kp FR_ASTR 			&none				&kp RSHFT			&kp RCTRL			&kp RALT		&kp RMETA
 				&kp FR_MINS		&kp FR_1		&kp FR_2		&kp FR_3		&kp FR_SLSH				&none				&kp C_BRI_DN		&kp C_BRI_UP		&kp LALT		&to BASE
-												&kp FR_DOT		&kp N0		&kp FR_EQL				&none				&none				&none
+												&kp FR_DOT		&kp FR_0		&kp FR_EQL				&none				&none				&none
 			>;
 		};
 
