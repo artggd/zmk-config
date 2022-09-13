@@ -25,6 +25,11 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
+#define MOVE_UP1 MOVE_VERT(-1400)
+#define MOVE_DOWN1 MOVE_VERT(1400)
+#define MOVE_LEFT1 MOVE_HOR(-1400)
+#define MOVE_RIGHT1 MOVE_HOR(1400)
+
 &mt {
     tapping-term-ms = <175>;
     flavor = "tap-preferred";
@@ -40,7 +45,7 @@
 };
 
 &mwh {
-    acceleration-exponent=<1>;
+    acceleration-exponent=<2>;
 };
 
 &caps_word {
@@ -126,7 +131,7 @@
 				&kp FR_Q				&lh_pht FR_CIRC FR_W		&lh_pht RA(FR_ASTR) FR_F		&lh_pht RA(FR_COMM) FR_P		&lh_pht FR_DIAE FR_G			&rh_pht FR_DIAE FR_J	&rh_pht RA(FR_COMM) FR_L		&rh_pht RA(FR_ASTR) FR_O		&rh_pht FR_CIRC FR_Y		&td_quote
 				&lh_pht LMETA FR_A		&lh_pht LALT FR_R			&lh_pht LCTRL FR_S				&lh_pht LSHFT FR_T				&kp FR_D 						&kp FR_H				&rh_pht RSHFT FR_N				&rh_pht RCTRL FR_E				&rh_pht RALT FR_I			&rh_pht RMETA FR_U
 				&lt LYR_LCK FR_Z		&kp FR_X					&mt FR_CCED FR_C				&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
-														&lt MEDIA ESC 			&lt NAV SPACE			&lt MOUSE TAB				&lt NUM ENTER		&lt SYM BSPC			&lt FUN DEL
+														&lt MEDIA ESC 			&lt NAV SPACE			&lt MOUSE TAB				&lt NUM ENTER					&lt SYM BSPC			&lt FUN DEL
 			>;
 		};
 
@@ -141,8 +146,8 @@
 
 		mouse_layer {
 			bindings = <
-				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			&none			&mwh SCROLL_LEFT	&mmv MOVE_UP		&mwh SCROLL_RIGHT		&none
-				&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&caps_word		&mmv MOVE_LEFT 		&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_UP
+				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			&none			&mwh SCROLL_LEFT	&mmv MOVE_UP1		&mwh SCROLL_RIGHT		&none
+				&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&caps_word		&mmv MOVE_LEFT1 	&mmv MOVE_DOWN1		&mmv MOVE_RIGHT1		&mwh SCROLL_UP
 				&to BASE		&kp RALT		&none			&none			&none	 						&none			&none	 			&none				&none					&mwh SCROLL_DOWN
 												&none 			&none			&none							&mkp RCLK		&mkp LCLK			&mkp MCLK
 			>;
