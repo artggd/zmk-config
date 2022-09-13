@@ -67,6 +67,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp FR_LCBR>, <&kp FR_RCBR>, <&kp LEFT_ARROW>;
 		};
+		ctrl_c_t_v: ctrl_c_t_v_macro {
+			compatible = "zmk,behavior-macro";
+			label = "CTRL_C_T_V";
+			#binding-cells = <0>;
+			bindings = <&kp LC(INS)>, <&kp LC(FR_T)>, <&kp LS(INS)>, <&kp ENTER>;
+		};
 	};
 
 	combos {
@@ -80,6 +86,13 @@
 			#binding-cells = <0>;
 			tapping-term-ms = <175>;
 			bindings = <&mt FR_EXLM FR_QUOT>, <&kp FR_DQUO>;
+		};
+		ctrl_ctv_td: ctrl_ctv_td {
+			compatible = "zmk,behavior-tap-dance";
+			label = "CTRL_CTV_TD";
+			#binding-cells = <0>;
+			tapping-term-ms = <175>;
+			bindings = <&kp LC(INS)>, <&kp LC(FR_F)>, <&ctrl_c_t_v>;
 		};
 		lh_pht: left_hand_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -119,7 +132,7 @@
 
 		nav_layer {
 			bindings = <
-				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			&none				&kp HOME			&kp UP_ARROW		&kp END				&none
+				&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			&none				&kp HOME			&kp UP_ARROW		&kp END				&none
 				&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
 				&to BASE		&kp RALT		&none			&none			&none	 						&none				&none	 			&none				&none				&kp PG_DN
 												&none 			&none			&none							&kp ENTER			&kp BSPC			&kp DEL
