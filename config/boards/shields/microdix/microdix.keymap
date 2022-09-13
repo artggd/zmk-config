@@ -8,7 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
-#include "keymap_french.h"
+#include "helper/keymap_french.h"
+#include "helper/keypos.h"
 
 #define BASE       0
 #define NAV        1
@@ -19,6 +20,10 @@
 #define FUN        6
 #define SFT_SYM    7
 #define LYR_LCK    8
+
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
 &mt {
     tapping-term-ms = <175>;
@@ -76,6 +81,26 @@
 			tapping-term-ms = <175>;
 			bindings = <&mt FR_EXLM FR_QUOT>, <&kp FR_DQUO>;
 		};
+		lh_pht: left_hand_positional_hold_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LEFT_POSITIONAL_HOLD_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-unless-interrupted";
+			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
+			quick-tap-ms = <175>;
+			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = <KEYS_R THUMBS>;    // <---[[right-hand keys]]
+		};
+		rh_pht: right_hand_positional_hold_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "RIGHT_POSITIONAL_HOLD_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-unless-interrupted";
+			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
+			quick-tap-ms = <175>;
+			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = <KEYS_L THUMBS>;    // <---[[left-hand keys]]
+		};
 	};
 
 	keymap {
@@ -83,9 +108,9 @@
 
 		base_layer {
 			bindings = <
-				&kp FR_Q			&mt FR_CIRC FR_W	&mt RA(FR_ASTR) FR_F	&mt RA(FR_COMM) FR_P	&mt FR_DIAE FR_G			&mt FR_DIAE FR_J	&mt RA(FR_COMM) FR_L	&mt RA(FR_ASTR) FR_O	&mt FR_CIRC FR_Y	&td_quote
-				&mt LMETA FR_A		&mt LALT FR_R		&mt LCTRL FR_S			&mt LSHFT FR_T			&kp FR_D 					&kp FR_H			&mt RSHFT FR_N			&mt RCTRL FR_E			&mt RALT FR_I		&mt RMETA FR_U
-				&lt LYR_LCK FR_Z	&kp FR_X			&mt FR_CCED FR_C		&kp FR_V				&kp FR_B 					&kp FR_K			&kp FR_M 				&kp FR_COMM				&kp FR_SCLN			&kp FR_COLN
+				&kp FR_Q				&lh_pht FR_CIRC FR_W		&lh_pht RA(FR_ASTR) FR_F		&lh_pht RA(FR_COMM) FR_P		&lh_pht FR_DIAE FR_G			&rh_pht FR_DIAE FR_J	&rh_pht RA(FR_COMM) FR_L		&rh_pht RA(FR_ASTR) FR_O		&rh_pht FR_CIRC FR_Y		&td_quote
+				&lh_pht LMETA FR_A		&lh_pht LALT FR_R			&lh_pht LCTRL FR_S				&lh_pht LSHFT FR_T				&kp FR_D 						&kp FR_H				&rh_pht RSHFT FR_N				&rh_pht RCTRL FR_E				&rh_pht RALT FR_I			&rh_pht RMETA FR_U
+				&lt LYR_LCK FR_Z		&kp FR_X					&mt FR_CCED FR_C				&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
 														&lt MEDIA ESC 			&lt NAV SPACE			&lt MOUSE TAB				&lt NUM ENTER		&lt SYM BSPC			&lt FUN DEL
 			>;
 		};
