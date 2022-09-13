@@ -85,9 +85,9 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LEFT_POSITIONAL_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "tap-unless-interrupted";
+			flavor = "tap-preferred";
 			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <175>;
+			quick-tap-ms = <0>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_R THUMBS>;    // <---[[right-hand keys]]
 		};
@@ -95,9 +95,9 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "RIGHT_POSITIONAL_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "tap-unless-interrupted";
+			flavor = "tap-preferred";
 			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <175>;
+			quick-tap-ms = <0>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_L THUMBS>;    // <---[[left-hand keys]]
 		};
