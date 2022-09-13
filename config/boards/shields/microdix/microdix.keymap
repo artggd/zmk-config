@@ -124,6 +124,22 @@
 			hold-trigger-on-release;
 			hold-trigger-key-positions = <KEYS_L THUMBS>;    // <---[[left-hand keys]]
 		};
+		c_cedille_morph: c_cedille_morph {
+			compatible = "zmk,behavior-mod-morph";
+			label = "C_CEDILLE_MORPH";
+			#binding-cells = <0>;
+			bindings = <&kp FR_CCED>, <&kp FR_Q>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		c_cedille_ht: c_cedille_ht {
+			compatible = "zmk,behavior-hold-tap";
+			label = "C_CEDILLE_HT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+			bindings = <&kp>, <&c_cedille_morph>;
+		};
 	};
 
 	keymap {
@@ -133,7 +149,7 @@
 			bindings = <
 				&kp FR_Q				&lh_pht FR_CIRC FR_W		&lh_pht RA(FR_ASTR) FR_F		&lh_pht RA(FR_COMM) FR_P		&lh_pht FR_DIAE FR_G			&rh_pht FR_DIAE FR_J	&rh_pht RA(FR_COMM) FR_L		&rh_pht RA(FR_ASTR) FR_O		&rh_pht FR_CIRC FR_Y		&td_quote
 				&lh_pht LMETA FR_A		&lh_pht LALT FR_R			&lh_pht LCTRL FR_S				&lh_pht LSHFT FR_T				&kp FR_D 						&kp FR_H				&rh_pht RSHFT FR_N				&rh_pht RCTRL FR_E				&rh_pht RALT FR_I			&rh_pht RMETA FR_U
-				&lt LYR_LCK FR_Z		&kp FR_X					&mt FR_CCED FR_C				&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
+				&lt LYR_LCK FR_Z		&kp FR_X					&c_cedille_ht FR_C FR_C				&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
 																	&lt MEDIA ESC 					&lt NAV SPACE					&lt MOUSE TAB					&lt NUM ENTER			&lt SYM BSPC					&lt FUN DEL
 			>;
 		};
