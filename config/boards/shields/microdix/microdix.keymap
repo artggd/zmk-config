@@ -85,20 +85,22 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "LEFT_POSITIONAL_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "balanced";
 			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <200>;
+			quick-tap-ms = <0>;
 			bindings = <&kp>, <&kp>;
+			hold-trigger-on-release;
 			hold-trigger-key-positions = <KEYS_R THUMBS>;    // <---[[right-hand keys]]
 		};
 		rh_pht: right_hand_positional_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			label = "RIGHT_POSITIONAL_HOLD_TAP";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "balanced";
 			tapping-term-ms = <280>;                         // <---[[produces tap if held longer than tapping-term-ms]]
-			quick-tap-ms = <200>;
+			quick-tap-ms = <0>;
 			bindings = <&kp>, <&kp>;
+			hold-trigger-on-release;
 			hold-trigger-key-positions = <KEYS_L THUMBS>;    // <---[[left-hand keys]]
 		};
 	};
@@ -114,7 +116,7 @@
 														&lt MEDIA ESC 			&lt NAV SPACE			&lt MOUSE TAB				&lt NUM ENTER		&lt SYM BSPC			&lt FUN DEL
 			>;
 		};
-		
+
 		nav_layer {
 			bindings = <
 				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			&none				&kp HOME			&kp UP_ARROW		&kp END				&none

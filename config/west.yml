@@ -1,13 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: ftc-dodubassman
-      url-base: https://github.com/dodubassman
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: ftc-dodubassman
-      revision: mouse-ftc
+      remote: urob
+      revision: main
       import: app/west.yml
   self:
     path: config
