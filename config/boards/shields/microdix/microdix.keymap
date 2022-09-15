@@ -101,7 +101,7 @@
 			label = "TAP_DANCE_MOD_TAP";
 			#binding-cells = <0>;
 			tapping-term-ms = <175>;
-			bindings = <&mt FR_EXLM FR_QUOT>, <&kp FR_DQUO>;
+			bindings = <&kp FR_QUOT>, <&kp FR_DQUO>, <&kp FR_EXLM>;
 		};
 		ctrl_ctv_td: ctrl_ctv_td {
 			compatible = "zmk,behavior-tap-dance";
