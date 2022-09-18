@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "helper/keymap_french.h"
 #include "helper/keypos.h"
+#include "helper/mouse.dtsi"
 
 #define BASE       0
 #define NAV        1
@@ -25,11 +26,6 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
-#define MOVE_UP1 MOVE_VERT(-1400)
-#define MOVE_DOWN1 MOVE_VERT(1400)
-#define MOVE_LEFT1 MOVE_HOR(-1400)
-#define MOVE_RIGHT1 MOVE_HOR(1400)
-
 #define ______ &trans
 #define xxxxxx &none
 
@@ -41,14 +37,6 @@
 &sk {
      release-after-ms = <2000>;
      quick-release;
-};
-
-&mmv {
-    time-to-max-speed-ms = <100>;
-};
-
-&mwh {
-    acceleration-exponent=<0>;
 };
 
 &caps_word {
@@ -177,8 +165,8 @@
 
 		mouse_layer {
 			bindings = <
-				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx			&mwh SCROLL_LEFT	&mmv MOVE_UP1		&mwh SCROLL_RIGHT		xxxxxx
-				&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&caps_word		&mmv MOVE_LEFT1 	&mmv MOVE_DOWN1		&mmv MOVE_RIGHT1		&mwh SCROLL_UP
+				&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx			&mwh SCROLL_LEFT	&mmv MOVE_UP		&mwh SCROLL_RIGHT		xxxxxx
+				&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&caps_word		&mmv MOVE_LEFT	 	&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_UP
 				&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 						xxxxxx			xxxxxx	 			xxxxxx				xxxxxx					&mwh SCROLL_DOWN
 												xxxxxx 			xxxxxx			xxxxxx							&mkp RCLK		&mkp LCLK			&mkp MCLK
 			>;
