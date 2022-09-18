@@ -48,7 +48,7 @@
 };
 
 &mwh {
-    acceleration-exponent=<2>;
+    acceleration-exponent=<0>;
 };
 
 &caps_word {
