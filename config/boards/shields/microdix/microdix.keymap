@@ -92,7 +92,12 @@
 	};
 
 	combos {
-
+		compatible = "zmk,combos";
+		combo_exlm {
+			timeout-ms = <50>;
+			key-positions = <RT3 RT4>;
+			bindings = <&kp FR_EXLM>;
+		};
 	};
 
 	behaviors {
