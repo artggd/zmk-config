@@ -112,6 +112,18 @@ ZMK_BEHAVIOR(lt_spc, hold_tap,
 	bindings = <&mo>, <&spc_morph>;
 )
 
+// tap -> backspace | rshft + tap: delete | hold: sym layer
+ZMK_BEHAVIOR(bs_del_sym, mod_morph,
+    bindings = <&lt SYM BSPC>, <&kp DEL>;
+    mods = <(MOD_RSFT)>;
+)
+
+// tap -> sticky-shift | rshft + tap: caps-word | hold: shift
+ZMK_BEHAVIOR(ss_cw, mod_morph,
+    bindings = <&sk RSHFT>, <&caps_word>;
+    mods = <(MOD_RSFT)>;
+)
+
 // home-row mods
 ZMK_BEHAVIOR(lh_pht, hold_tap,  // left-hand HRMs
 	flavor = "balanced";
@@ -138,13 +150,13 @@ ZMK_LAYER(base_layer,
 	&kp FR_Q				&lh_pht FR_CIRC FR_W		&lh_pht RA(FR_ASTR) FR_F		&lh_pht RA(FR_COMM) FR_P		&lh_pht FR_DIAE FR_G			&rh_pht FR_DIAE FR_J	&rh_pht RA(FR_COMM) FR_L		&rh_pht RA(FR_ASTR) FR_O		&rh_pht FR_CIRC FR_Y		&td_quote
 	&lh_pht LMETA FR_A		&lh_pht LALT FR_R			&lh_pht LCTRL FR_S				&lh_pht LSHFT FR_T				&kp FR_D 						&kp FR_H				&rh_pht RSHFT FR_N				&rh_pht RCTRL FR_E				&rh_pht RALT FR_I			&rh_pht RMETA FR_U
 	&lt LYR_LCK FR_Z		&kp FR_X					&c_cedille_ht FR_C FR_C			&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
-														&lt MEDIA ESC 					&lt_spc NAV 0					&lt MOUSE TAB					&lt NUM ENTER			&lt SYM BSPC					&lt FUN DEL
+														&lt MEDIA ESC 					&lt_spc NAV 0					&lt FUN TAB						&lt NUM ENTER			&bs_del_sym						&ss_cw
 )
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
 	&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 						xxxxxx				xxxxxx	 			xxxxxx				xxxxxx				&kp PG_DN
-									xxxxxx 			xxxxxx			xxxxxx							&kp ENTER			&kp BSPC			&kp DEL
+									xxxxxx 			xxxxxx			xxxxxx							______				______				______
 )
 ZMK_LAYER(mouse_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx			&mwh SCROLL_LEFT	&mmv MOVE_UP		&mwh SCROLL_RIGHT		xxxxxx
@@ -186,5 +198,5 @@ ZMK_LAYER(lyr_lck_layer,
 	______		______		______			______		______					______		______		______		______		______
 	______		______		______			______		______					______		______		______		______		______
 	______		______		______			______		______					______		______		______		______		______
-							&to MEDIA 		&to NAV		&to MOUSE 				&to NUM		&to SYM		&to FUN
+							&to MEDIA 		&to NAV		&to FUN 				&to NUM		&to SYM		______
 )
