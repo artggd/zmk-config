@@ -59,9 +59,6 @@ ZMK_BEHAVIOR(squarebrackets, macro,
 ZMK_BEHAVIOR(curlybrackets, macro,
 	bindings = <&kp FR_LCBR>, <&kp FR_RCBR>, <&kp LEFT_ARROW>;
 )
-ZMK_BEHAVIOR(ctrl_c_t_v, macro,
-	bindings = <&kp LC(INS)>, <&kp LC(FR_T)>, <&kp LS(INS)>, <&kp ENTER>;
-)
 
 // tap -> c | hold -> ç | hold + shift -> Ç
 ZMK_BEHAVIOR(c_cedille_macro, macro,
@@ -93,6 +90,9 @@ ZMK_BEHAVIOR(td_quote, tap_dance,
 ZMK_BEHAVIOR(ctrl_ctv_td, tap_dance,
 	tapping-term-ms = <175>;
 	bindings = <&kp LC(INS)>, <&kp LC(FR_F)>, <&ctrl_c_t_v>;
+)
+ZMK_BEHAVIOR(ctrl_c_t_v, macro,
+	bindings = <&kp LC(INS)>, <&kp LC(FR_T)>, <&kp LS(INS)>, <&kp ENTER>;
 )
 
 // tap -> space | space + shift -> dot, space, sticky shift | hold -> activate layer
