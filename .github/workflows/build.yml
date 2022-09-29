@@ -1,5 +1,12 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
