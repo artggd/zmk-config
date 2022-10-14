@@ -158,7 +158,6 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 		global-quick-tap-ms = <150>; \
 		bindings = <&no_shift_morph_ ## name>, <&kp>; \
 		hold-trigger-key-positions = <target_keys THUMBS>; \
-		hold-trigger-on-release; \
 	)
 
 // no-shift on hold left hand
