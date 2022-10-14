@@ -161,9 +161,9 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 	UC_MODMORPH(no_shift_morph_ ## name, &kp deadkey, &upper ## name) \
 	ZMK_BEHAVIOR(name, hold_tap, \
 		flavor = "balanced"; \
-		tapping-term-ms = <50>; \
+		tapping-term-ms = <150>; \
 		quick-tap-ms = <QUICK_TAP_MS>; \
-		global-quick-tap-ms = <30>; \
+		global-quick-tap-ms = <200>; \
 		bindings = <&no_shift_morph_ ## name>, <&kp>; \
 		hold-trigger-key-positions = <target_keys THUMBS>; \
 	)
