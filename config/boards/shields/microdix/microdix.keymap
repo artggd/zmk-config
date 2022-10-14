@@ -43,6 +43,7 @@
 &sk {
      release-after-ms = <2000>;
      quick-release;
+     ignore-modifiers;
 };
 
 &caps_word {
@@ -147,13 +148,42 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 	hold-trigger-on-release;            // requires PR #1423
 )
 
+// no shift positional hold tap (the character on-hold cannot be shifted)
+#define NO_SFT_PHT(name, deadkey, target_keys) \
+	ZMK_BEHAVIOR(lower ## name, macro, \
+		wait-ms = <0>; \
+		tap-ms = <1>; \
+		bindings = <&macro_tap &kp deadkey>; \
+	) \
+	UC_MODMORPH(no_shift_morph_ ## name, &lower ## name, &lower ## name) \
+	ZMK_BEHAVIOR(name, hold_tap, \
+		flavor = "balanced"; \
+		tapping-term-ms = <150>; \
+		quick-tap-ms = <QUICK_TAP_MS>; \
+		global-quick-tap-ms = <200>; \
+		bindings = <&no_shift_morph_ ## name>, <&kp>; \
+		hold-trigger-key-positions = <target_keys THUMBS>; \
+	)
+
+// no-shift on hold left hand
+NO_SFT_PHT(lh_dead_circ, FR_CIRC, KEYS_R)
+NO_SFT_PHT(lh_dead_grave, RA(FR_ASTR), KEYS_R)
+NO_SFT_PHT(lh_dead_aigu, RA(FR_COMM), KEYS_R)
+NO_SFT_PHT(lh_dead_trema, FR_DIAE, KEYS_R)
+
+// no-shift on hold right hand
+NO_SFT_PHT(rh_dead_circ, FR_CIRC, KEYS_L)
+NO_SFT_PHT(rh_dead_grave, RA(FR_ASTR), KEYS_L)
+NO_SFT_PHT(rh_dead_aigu, RA(FR_COMM), KEYS_L)
+NO_SFT_PHT(rh_dead_trema, FR_DIAE, KEYS_L)
+
 /* keymap */
 
 ZMK_LAYER(base_layer,
-	&kp FR_Q				&lh_pht FR_CIRC FR_W		&lh_pht RA(FR_ASTR) FR_F		&lh_pht RA(FR_COMM) FR_P		&lh_pht FR_DIAE FR_G			&rh_pht FR_DIAE FR_J	&rh_pht RA(FR_COMM) FR_L		&rh_pht RA(FR_ASTR) FR_O		&rh_pht FR_CIRC FR_Y		&td_quote
-	&lh_pht LMETA FR_A		&lh_pht LALT FR_R			&lh_pht LCTRL FR_S				&lh_pht LSHFT FR_T				&kp FR_D 						&kp FR_H				&rh_pht RSHFT FR_N				&rh_pht RCTRL FR_E				&rh_pht RALT FR_I			&rh_pht RMETA FR_U
-	&lt LYR_LCK FR_Z		&kp FR_X					&c_cedille_ht FR_C FR_C			&kp FR_V						&kp FR_B 						&kp FR_K				&kp FR_M 						&kp FR_COMM						&kp FR_SCLN					&kp FR_COLN
-														&lt MEDIA ESC 					&lt_spc NAV 0					&lt MOUSE TAB					&lt NUM ENTER			&bs_del_sym						&ss_cw
+	&kp FR_Q				&lh_dead_circ FR_CIRC FR_W		&lh_dead_grave RA(FR_ASTR) FR_F		&lh_dead_aigu RA(FR_COMM) FR_P		&lh_dead_trema FR_DIAE FR_G		&rh_dead_trema FR_DIAE FR_J		&rh_dead_aigu RA(FR_COMM) FR_L		&rh_dead_grave RA(FR_ASTR) FR_O		&rh_dead_circ FR_CIRC FR_Y		&td_quote
+	&lh_pht LMETA FR_A		&lh_pht LALT FR_R				&lh_pht LCTRL FR_S					&lh_pht LSHFT FR_T					&kp FR_D 						&kp FR_H						&rh_pht RSHFT FR_N					&rh_pht RCTRL FR_E					&rh_pht RALT FR_I				&rh_pht RMETA FR_U
+	&lt LYR_LCK FR_Z		&kp FR_X						&c_cedille_ht FR_C FR_C				&kp FR_V							&kp FR_B 						&kp FR_K						&kp FR_M 							&kp FR_COMM							&kp FR_SCLN						&kp FR_COLN
+															&lt MEDIA ESC 						&lt_spc NAV 0						&lt MOUSE TAB					&lt NUM ENTER					&bs_del_sym							&ss_cw
 )
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
