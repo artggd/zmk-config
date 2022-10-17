@@ -196,7 +196,7 @@ ZMK_LAYER(base_layer,
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
 	&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
-	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 						xxxxxx				xxxxxx	 			xxxxxx				xxxxxx				&kp PG_DN
+	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 						xxxxxx				xxxxxx	 			&kp K_CMENU			xxxxxx				&kp PG_DN
 									xxxxxx 			xxxxxx			xxxxxx							______				______				______
 )
 ZMK_LAYER(mouse_layer,
