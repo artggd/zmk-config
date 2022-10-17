@@ -52,12 +52,18 @@
 
 // open / close brackets
 ZMK_BEHAVIOR(parentheses, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
 	bindings = <&kp FR_LPRN>, <&kp FR_RPRN>, <&kp LEFT_ARROW>;
 )
 ZMK_BEHAVIOR(squarebrackets, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
 	bindings = <&kp FR_LBRC>, <&kp FR_RBRC>, <&kp LEFT_ARROW>;
 )
 ZMK_BEHAVIOR(curlybrackets, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
 	bindings = <&kp FR_LCBR>, <&kp FR_RCBR>, <&kp LEFT_ARROW>;
 )
 
