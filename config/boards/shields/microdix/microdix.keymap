@@ -90,6 +90,9 @@ ZMK_COMBO(combo_exlm,  &kp FR_EXLM, RT3 RT4, BASE)
 // combo fun layer
 ZMK_COMBO(combo_fun_layer,  &mo FUN, LH0 RH0, BASE)
 
+// combo scroll lock (compose key)
+ZMK_COMBO(combo_fun_layer,  &kp SCROLLLOCK, LB2 LB1, BASE)
+
 // tap -> ', double-tap -> "
 ZMK_BEHAVIOR(td_quote, tap_dance,
 	tapping-term-ms = <175>;
