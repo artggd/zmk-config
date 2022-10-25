@@ -25,6 +25,8 @@
 #define DIAC_ACUTE 9
 #define DIAC_RGRAVE 10
 #define DIAC_LGRAVE 11
+#define DIAC_RCIRC 12
+#define DIAC_LCIRC 13
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
@@ -218,10 +220,10 @@ NO_SFT_PHT(rh_dead_trema, FR_DIAE, KEYS_L)
 /* keymap */
 
 ZMK_LAYER(base_layer,
-	&kp FR_Q				&lh_dead_circ FR_CIRC FR_W		&lt DIAC_RGRAVE FR_F		&lt DIAC_ACUTE FR_P		&lh_dead_trema FR_DIAE FR_G		&rh_dead_trema FR_DIAE FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&rh_dead_circ FR_CIRC FR_Y		&td_quote
-	&lh_pht LMETA FR_A		&lh_pht LALT FR_R				&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H						&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht RALT FR_I				&rh_pht RMETA FR_U
-	&lt LYR_LCK FR_Z		&kp FR_X						&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K						&kp FR_M 				&kp FR_COMM				&kp FR_SCLN						&kp FR_COLN
-															&lt MEDIA ESC 				&lt_spc NAV 0			&lt MOUSE TAB					&lt NUM ENTER					&bs_del_sym				&ss_cw
+	&kp FR_Q				&lt DIAC_RCIRC FR_W		&lt DIAC_RGRAVE FR_F		&lt DIAC_ACUTE FR_P		&lh_dead_trema FR_DIAE FR_G		&rh_dead_trema FR_DIAE FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&lt DIAC_LCIRC FR_Y		&td_quote
+	&lh_pht LMETA FR_A		&lh_pht LALT FR_R		&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H						&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht RALT FR_I		&rh_pht RMETA FR_U
+	&lt LYR_LCK FR_Z		&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K						&kp FR_M 				&kp FR_COMM				&kp FR_SCLN				&kp FR_COLN
+													&lt MEDIA ESC 				&lt_spc NAV 0			&lt MOUSE TAB					&lt NUM ENTER					&bs_del_sym				&ss_cw
 )
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
@@ -284,8 +286,20 @@ ZMK_LAYER(diac_rgrave,
 							______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(diac_lgrave,
-	______			______		______			______		______				______		______		xxxxxx		______		______
-	&fr_agrave		______		______			______		______				______		______		______		______		______
-	______			______		______			______		______				______		______		______		______		______
-								______ 			______		______ 				______		______		______
+	______			______		______		______		______				______		______		xxxxxx		______		______
+	&fr_agrave		______		______		______		______				______		______		______		______		______
+	______			______		______		______		______				______		______		______		______		______
+								______ 		______		______ 				______		______		______
+)
+ZMK_LAYER(diac_rcirc,
+	______		xxxxxx		______			______		______				______		______		&kp RA(FR_P)		______			______
+	______		______		______			______		______				______		______		&kp RA(FR_R)		&kp RA(FR_I)	&kp RA(FR_U)
+	______		______		______			______		______				______		______		______				______			______
+							______ 			______		______ 				______		______		______
+)
+ZMK_LAYER(diac_lcirc,
+	______			______		______		______		______				______		______		______		xxxxxx		______
+	&kp RA(FR_Z)	______		______		______		______				______		______		______		______		______
+	______			______		______		______		______				______		______		______		______		______
+								______ 		______		______ 				______		______		______
 )
