@@ -57,7 +57,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS BACKSPACE SEMICOLON>;
+    continue-list = <UNDERSCORE MINUS BACKSPACE FR_M>;
 };
 
 // open / close brackets
