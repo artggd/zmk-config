@@ -53,7 +53,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
 // open / close brackets
@@ -166,7 +166,7 @@ ZMK_BEHAVIOR(fr_agrave, mod_morph,
 // tap -> sticky-shift | rshft + tap: caps-word | hold: shift
 ZMK_BEHAVIOR(ss_cw, mod_morph,
     bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_RSFT)>;
+    mods = <(MOD_LSFT)>;
 )
 
 // home-row mods
