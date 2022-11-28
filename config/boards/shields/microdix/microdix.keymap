@@ -28,6 +28,10 @@
 #define DIAC_RCIRC 12
 #define DIAC_LCIRC 13
 #define DIAC_TREMA 14
+#define SMART_CASE 15
+#define CAMEL_CASE 16
+#define SNAKE_CASE 17
+#define KEBAB_CASE 18
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
@@ -95,6 +99,9 @@ ZMK_COMBO(combo_exlm, &kp FR_EXLM, RT3 RT4, BASE)
 
 // combo fun layer
 ZMK_COMBO(combo_fun_layer, &mo FUN, LH0 RH0, BASE)
+
+// combo smart case
+ZMK_COMBO(combo_smart_layer, &mo SMART_CASE, LH2 RH2, BASE)
 
 // combo scroll lock (compose key)
 ZMK_COMBO(combo_compose_key, &kp SCROLLLOCK, LB2 LB1, BASE)
@@ -280,4 +287,28 @@ ZMK_LAYER(diac_trema,
 	______		______		______		______		______				______		______		&kp RA(FR_D)	&kp RA(FR_K)	______
 	______		______		______		______		______				______		______		______			______			______
 							______ 		______		______ 				______		______		______
+)
+ZMK_LAYER(smart_case,
+	______		______				______				______				______				______		______		______		______		______
+	______		&tog CAMEL_CASE		&tog SNAKE_CASE		&tog KEBAB_CASE		______				______		______		______		______		______
+	______		______				______				______				______				______		______		______		______		______
+									______ 				______				______ 				______		______		______
+)
+ZMK_LAYER(camel_case,
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+							&tog CAMEL_CASE		&sk LSHFT	______ 				______		______		______
+)
+ZMK_LAYER(snake_case,
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+							&tog SNAKE_CASE		&kp FR_UNDS	______ 				______		______		______
+)
+ZMK_LAYER(kebab_case,
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+	______		______		______				______		______				______		______		______		______		______
+							&tog KEBAB_CASE		&kp FR_MINS	______ 				______		______		______
 )
