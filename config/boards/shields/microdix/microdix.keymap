@@ -174,7 +174,7 @@ ZMK_BEHAVIOR(lh_pht, hold_tap,  // left-hand HRMs
 	flavor = "balanced";
 	tapping-term-ms = <180>;
 	quick-tap-ms = <QUICK_TAP_MS>;
-	global-quick-tap-ms = <150>;        // requires PR #1387
+	global-quick-tap-ms = <50>;        // requires PR #1387
 	bindings = <&kp>, <&kp>;
 	hold-trigger-key-positions = <KEYS_R THUMBS>;
 	hold-trigger-on-release;            // requires PR #1423
@@ -183,7 +183,7 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 	flavor = "balanced";
 	tapping-term-ms = <180>;
 	quick-tap-ms = <QUICK_TAP_MS>;
-	global-quick-tap-ms = <150>;        // requires PR #1387
+	global-quick-tap-ms = <50>;        // requires PR #1387
 	bindings = <&kp>, <&kp>;
 	hold-trigger-key-positions = <KEYS_L THUMBS>;
 	hold-trigger-on-release;            // requires PR #1423
