@@ -172,7 +172,7 @@ ZMK_BEHAVIOR(ss_cw, mod_morph,
 // home-row mods
 ZMK_BEHAVIOR(lh_pht, hold_tap,  // left-hand HRMs
 	flavor = "balanced";
-	tapping-term-ms = <280>;
+	tapping-term-ms = <180>;
 	quick-tap-ms = <QUICK_TAP_MS>;
 	global-quick-tap-ms = <150>;        // requires PR #1387
 	bindings = <&kp>, <&kp>;
@@ -181,7 +181,7 @@ ZMK_BEHAVIOR(lh_pht, hold_tap,  // left-hand HRMs
 )
 ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 	flavor = "balanced";
-	tapping-term-ms = <280>;
+	tapping-term-ms = <180>;
 	quick-tap-ms = <QUICK_TAP_MS>;
 	global-quick-tap-ms = <150>;        // requires PR #1387
 	bindings = <&kp>, <&kp>;
