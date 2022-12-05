@@ -112,6 +112,12 @@ ZMK_BEHAVIOR(shft_quote, mod_morph,
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+// tap -> ., shift tap -> ;
+ZMK_BEHAVIOR(dot_semicolon, mod_morph,
+	bindings = <&kp FR_DOT>, <&FR_SCLN>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 // tap -> copy | double-tap -> copy + ctrl+f | triple-tap -> copy + ctrl+t, ctrl+v, enter
 ZMK_BEHAVIOR(ctrl_ctv_td, tap_dance,
 	tapping-term-ms = <175>;
@@ -201,7 +207,7 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 ZMK_LAYER(base_layer,
 	&kp FR_Q				&lt DIAC_RCIRC FR_W		&lt DIAC_ACUTE FR_F			&lt DIAC_RGRAVE FR_P	&lt DIAC_TREMA FR_G				&kp FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&lt DIAC_LCIRC FR_Y		&shft_quote
 	&lh_pht LMETA FR_A		&lh_pht LALT FR_R		&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H		&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht RALT FR_I		&rh_pht RMETA FR_U
-	&lt LYR_LCK FR_Z		&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K		&kp FR_M 				&kp FR_COMM				&kp FR_SCLN				&mt LSHIFT FR_COLN
+	&lt LYR_LCK FR_Z		&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K		&kp FR_M 				&kp FR_COMM				&dot_semicolon			&mt LSHIFT FR_COLN
 													&lt MEDIA ESC 				&lt_spc NAV 0			&lt MOUSE TAB					&lt NUM ENTER	&bs_del_sym				&ss_cw
 )
 ZMK_LAYER(nav_layer,
