@@ -108,13 +108,13 @@ ZMK_COMBO(combo_compose_key, &kp SCROLLLOCK, LB2 LB1, BASE)
 
 // tap -> ', shift tap -> "
 ZMK_BEHAVIOR(shft_quote, mod_morph,
-	bindings = <&kp FR_QUOT>, <&FR_DQUO>;
+	bindings = <&kp FR_QUOT>, <&kp FR_DQUO>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // tap -> ., shift tap -> ;
 ZMK_BEHAVIOR(dot_semicolon, mod_morph,
-	bindings = <&kp FR_DOT>, <&FR_SCLN>;
+	bindings = <&kp FR_DOT>, <&kp FR_SCLN>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
