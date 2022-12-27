@@ -12,6 +12,7 @@
 #include "helper/mouse.dtsi"
 #include "../../../../zmk-nodefree-config/helper.h"
 #include "../../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
+#include "../../../../zmk-nodefree-config/international_chars/french.dtsi"
 
 #define BASE       0
 #define NAV        1
@@ -78,20 +79,11 @@ ZMK_BEHAVIOR(curlybrackets, macro,
 )
 
 // tap -> c | hold -> ç | hold + shift -> Ç
-ZMK_BEHAVIOR(c_cedille_macro, macro,
-	wait-ms	= <1>;
-	tap-ms = <1>;
-	bindings = <&kp CAPSLOCK>, <&kp FR_CCED>, <&kp CAPSLOCK>;
-)
 ZMK_BEHAVIOR(c_cedille_ht, hold_tap,
 	flavor = "tap-preferred";
 	tapping-term-ms = <175>;
 	global-quick-tap;
-	bindings = <&c_cedille_morph>, <&kp>;
-)
-ZMK_BEHAVIOR(c_cedille_morph, mod_morph,
-	bindings = <&kp FR_CCED>, <&c_cedille_macro>;
-	mods = <(MOD_LSFT|MOD_RSFT)>;
+	bindings = <&fr_c_cedilla>, <&kp>;
 )
 
 // y + ' -> !
@@ -150,30 +142,6 @@ ZMK_BEHAVIOR(lt_spc, hold_tap,
 ZMK_BEHAVIOR(bs_del_sym, mod_morph,
     bindings = <&lt SYM BSPC>, <&kp DEL>;
     mods = <(MOD_RSFT)>;
-)
-
-// tap -> é | shft + tap: É
-ZMK_BEHAVIOR(fr_eacute, mod_morph,
-    bindings = <&kp FR_EACU>, <&kp RA(RS(FR_EACU))>;
-    mods = <(MOD_RSFT|MOD_LSFT)>;
-)
-
-// tap -> è | shft + tap: È
-ZMK_BEHAVIOR(fr_egrave, mod_morph,
-    bindings = <&kp FR_EGRV>, <&kp RA(RS(FR_EGRV))>;
-    mods = <(MOD_RSFT|MOD_LSFT)>;
-)
-
-// tap -> ù | shft + tap: Ù
-ZMK_BEHAVIOR(fr_ugrave, mod_morph,
-    bindings = <&kp FR_UGRV>, <&kp RA(RS(FR_UGRV))>;
-    mods = <(MOD_RSFT|MOD_LSFT)>;
-)
-
-// tap -> à | shft + tap: À
-ZMK_BEHAVIOR(fr_agrave, mod_morph,
-    bindings = <&kp FR_AGRV>, <&kp RA(RS(FR_AGRV))>;
-    mods = <(MOD_RSFT|MOD_LSFT)>;
 )
 
 // tap -> sticky-shift | rshft + tap: caps-word | hold: shift
@@ -260,38 +228,38 @@ ZMK_LAYER(lyr_lck_layer,
 )
 ZMK_LAYER(diac_acute,
 	______		______		______		xxxxxx		______				______		______		______			______		______
-	______		______		______		______		______				______		______		&fr_eacute		______		______
+	______		______		______		______		______				______		______		&fr_e_acute		______		______
 	______		______		______		______		______				______		______		______			______		______
 							______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(diac_rgrave,
 	______		______		xxxxxx		______		______				______		______		______			______		______
-	______		______		______		______		______				______		______		&fr_egrave		______		&fr_ugrave
+	______		______		______		______		______				______		______		&fr_e_grave		______		&fr_u_grave
 	______		______		______		______		______				______		______		______			______		______
 							______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(diac_lgrave,
 	______			______		______		______		______				______		______		xxxxxx		______		______
-	&fr_agrave		______		______		______		______				______		______		______		______		______
+	&fr_a_grave		______		______		______		______				______		______		______		______		______
 	______			______		______		______		______				______		______		______		______		______
 								______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(diac_rcirc,
-	______		xxxxxx		______			______		______				______		______		&kp RA(FR_P)		______			______
-	______		______		______			______		______				______		______		&kp RA(FR_R)		&kp RA(FR_I)	&kp RA(FR_U)
-	______		______		______			______		______				______		______		______				______			______
+	______		xxxxxx		______			______		______				______		______		&fr_o_circumflex	______				______
+	______		______		______			______		______				______		______		&fr_e_circumflex	&fr_i_circumflex	&fr_u_circumflex
+	______		______		______			______		______				______		______		______				______				______
 							______ 			______		______ 				______		______		______
 )
 ZMK_LAYER(diac_lcirc,
-	______			______		______		______		______				______		______		______		xxxxxx		______
-	&kp RA(FR_Z)	______		______		______		______				______		______		______		______		______
-	______			______		______		______		______				______		______		______		______		______
-								______ 		______		______ 				______		______		______
+	______				______		______		______		______				______		______		______		xxxxxx		______
+	&fr_a_circumflex	______		______		______		______				______		______		______		______		______
+	______				______		______		______		______				______		______		______		______		______
+									______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(diac_trema,
-	______		______		______		______		xxxxxx				______		______		______			______			______
-	______		______		______		______		______				______		______		&kp RA(FR_D)	&kp RA(FR_K)	______
-	______		______		______		______		______				______		______		______			______			______
+	______		______		______		______		xxxxxx				______		______		______				______			&fr_y_diaeresis
+	______		______		______		______		______				______		______		&fr_e_diaeresis		&fr_i_diaeresis	______
+	______		______		______		______		______				______		______		______				______			______
 							______ 		______		______ 				______		______		______
 )
 ZMK_LAYER(smart_case,
