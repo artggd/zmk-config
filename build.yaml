@@ -17,5 +17,3 @@ include:
     shield: microdix_left
   - board: nice_nano_v2
     shield: microdix_right
-  - board: nice_nano_v2
-    shield: settings_reset
