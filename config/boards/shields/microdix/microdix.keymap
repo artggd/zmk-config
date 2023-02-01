@@ -185,10 +185,10 @@ ZMK_LAYER(media_layer,
 									xxxxxx 			xxxxxx			xxxxxx					&kp C_STOP		&kp C_PP		&kp C_MUTE
 )
 ZMK_LAYER(num_layer,
-	&backticks		&kp FR_7		&kp FR_8		&kp FR_9		&kp FR_BSLS				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
-	&kp FR_PLUS		&kp FR_4		&kp FR_5 		&kp FR_6 		&kp FR_ASTR 			xxxxxx				&kp RSHFT		&kp RCTRL		&kp LALT		&kp RMETA
-	&kp FR_MINS		&kp FR_1		&kp FR_2		&kp FR_3		&kp FR_SLSH				xxxxxx				xxxxxx			xxxxxx			&kp RALT		&to BASE
-									&kp FR_DOT		&kp FR_0		&kp FR_EQL				xxxxxx				xxxxxx			xxxxxx
+	&backticks		&kp KP_7		&kp KP_8		&kp KP_9		&kp FR_BSLS				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
+	&kp FR_PLUS		&kp KP_4		&kp KP_5 		&kp KP_6 		&kp FR_ASTR 			xxxxxx				&kp RSHFT		&kp RCTRL		&kp LALT		&kp RMETA
+	&kp FR_MINS		&kp KP_1		&kp KP_2		&kp KP_3		&kp FR_SLSH				xxxxxx				xxxxxx			xxxxxx			&kp RALT		&to BASE
+									&kp FR_DOT		&kp KP_0		&kp FR_EQL				xxxxxx				xxxxxx			xxxxxx
 )
 ZMK_LAYER(sym_layer,
 	&kp FR_TILD				&kp FR_PERC		&kp FR_CIRC		&kp FR_UNDS		&squarebrackets				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
