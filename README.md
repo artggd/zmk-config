@@ -2,4 +2,4 @@
 
 A layout optimized for french and programing.
 
-![img.png](img%2Fimg.png)
+![img.png](img/img.png)
