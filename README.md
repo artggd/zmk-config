@@ -2,4 +2,4 @@
 
 A layout optimized for french and programing.
 
-![img.png](img/img.png)
+![img.png](https://github.com/artggd/zmk-config/blob/main/img/img.png)
