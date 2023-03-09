@@ -62,7 +62,7 @@
 };
 
 // middle dot
-ZMK_UNICODE(middle_dot,    N0, N0, B, N7)
+ZMK_UNICODE_SINGLE(middle_dot, N0, N0, B, N7)
 
 // open / close brackets
 ZMK_BEHAVIOR(parentheses, macro,
