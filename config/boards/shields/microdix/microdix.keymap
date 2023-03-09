@@ -61,6 +61,9 @@
     continue-list = <UNDERSCORE MINUS BACKSPACE FR_M>;
 };
 
+// middle dot
+ZMK_UNICODE(middle_dot,    N0, N0, B, N7)
+
 // open / close brackets
 ZMK_BEHAVIOR(parentheses, macro,
 	wait-ms = <0>;
@@ -93,6 +96,9 @@ ZMK_BEHAVIOR(c_cedille_ht, hold_tap,
 
 // y + ' -> !
 ZMK_COMBO(combo_exlm, &kp FR_EXLM, RT3 RT4, BASE)
+
+// , + ; -> middle dot
+ZMK_COMBO(combo_middle_dot, &middle_dot, RB2 RB3, BASE)
 
 // combo fun layer
 ZMK_COMBO(combo_fun_layer, &mo FUN, LH0 RH0, BASE)
