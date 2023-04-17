@@ -170,7 +170,7 @@ ZMK_LAYER(base_layer,
 	&kp FR_Q				&lt DIAC_RCIRC FR_W		&lt DIAC_ACUTE FR_F			&lt DIAC_RGRAVE FR_P	&lt DIAC_TREMA FR_G				&kp FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&lt DIAC_LCIRC FR_Y		&shft_quote
 	&lh_pht LMETA FR_A		&lh_pht LALT FR_R		&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H		&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht LALT FR_I		&rh_pht RMETA FR_U
 	&lt LYR_LCK FR_Z		&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K		&kp FR_M 				&kp FR_COMM				&rh_pht RALT FR_SCLN	&mt LSHIFT FR_COLN
-													&lt MEDIA ESC 				&lt NAV SPACE			&lt MOUSE TAB					&shft_num		&bs_del_sym				&lt FUN ENTER
+													&lt MEDIA ESC 				&lt NAV SPACE			&lt MOUSE TAB					&lt FUN ENTER	&bs_del_sym				&shft_num
 )
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
@@ -203,10 +203,10 @@ ZMK_LAYER(sym_layer,
 											&kp FR_LABK		&mo NAV			&kp FR_RABK					xxxxxx				xxxxxx			xxxxxx
 )
 ZMK_LAYER(fun_layer,
-	xxxxxx		&kp F7		&kp F8		&kp F9		&kp F12			&kp PSCRN		xxxxxx			xxxxxx			xxxxxx			xxxxxx
+	xxxxxx		&kp F7		&kp F8		&kp F9		&kp F12			xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx
 	xxxxxx		&kp F4		&kp F5		&kp F6		&kp F11			xxxxxx			&kp RSHFT		&kp RCTRL		&kp LALT		&kp RMETA
 	&to BASE	&kp F1		&kp F2		&kp F3		&kp F10			xxxxxx			xxxxxx			xxxxxx			&kp RALT		&to BASE
-							xxxxxx		xxxxxx		xxxxxx			xxxxxx			xxxxxx			xxxxxx
+							xxxxxx		xxxxxx		&kp PSCRN		xxxxxx			xxxxxx			xxxxxx
 )
 ZMK_LAYER(sft_sym_layer,
 	xxxxxx		xxxxxx		xxxxxx		&kp FR_LBRC		&kp FR_RBRC				xxxxxx		xxxxxx		xxxxxx		xxxxxx		xxxxxx
