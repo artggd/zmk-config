@@ -8,8 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse_settings.h>
+// Enable Mouse Keys
+#include "helper/mouse_keys.dtsi"
 #include "helper/keymap_french.h"
-#include "helper/mouse.dtsi"
+//#include "helper/mouse.dtsi"
 #include "../../../../zmk-nodefree-config/helper.h"
 #include "../../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
 #include "../../../../zmk-nodefree-config/international_chars/french.dtsi"
@@ -33,6 +36,7 @@
 #define CAMEL_CASE 16
 #define SNAKE_CASE 17
 #define KEBAB_CASE 18
+#define MOUSE_SET 19
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
@@ -93,6 +97,9 @@ ZMK_BEHAVIOR(c_cedille_ht, hold_tap,
 	global-quick-tap;
 	bindings = <&fr_c_cedilla>, <&kp>;
 )
+
+// mouse settings toggle
+ZMK_COMBO(mouse_settings, &tog MOUSE_SET, LT3 LT2 LT1, BASE)
 
 // y + ' -> !
 ZMK_COMBO(combo_exlm, &kp FR_EXLM, RT3 RT4, BASE)
@@ -267,4 +274,16 @@ ZMK_LAYER(kebab_case,
 	______		______		______				______		______				______		______		______		______		______
 	______		______		______				______		______				______		______		______		______		______
 							&tog KEBAB_CASE		&kp FR_MINS	______ 				______		______		______
+)
+
+ZMK_LAYER(mouse_settings,
+// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
+     &none                    &none                    U_MSS_TP_S_D             U_MSS_TP_S_I             U_MSS_TP_PT_I                 &none                    &none                    &none                    &none                    &none
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &none                    U_MSS_TP_NI_D            U_MSS_TP_NI_I            U_MSS_TP_PT_D                 &none                    &none                    &none                    &none                    &none
+// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
+     &none                    &none                    U_MSS_TP_V6_D            U_MSS_TP_V6_I            &none                         &none                    &none                    &none                    &none                    &none
+// ╰────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┴────────────────────────╯
+                                                       &tog MOUSE_SET           U_BTN1                   U_BTN2                        U_BTN3                   U_BTN1                   U_BTN2
+//                                                   ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
 )
