@@ -53,7 +53,7 @@
         compatible = "gpio-ps2";
 
         scl-gpios = <&pro_micro 14 0>;
-        sda-gpios = <&pro_micro 10 0>;
+        sda-gpios = <&pro_micro 15 0>;
     };
 };
 
