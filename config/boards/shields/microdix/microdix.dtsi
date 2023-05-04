@@ -52,8 +52,8 @@
 		status = "disabled";
         compatible = "gpio-ps2";
 
-        scl-gpios = <&pro_micro 14 0>;
-        sda-gpios = <&pro_micro 15 0>;
+        scl-gpios = <&pro_micro 0 0>;
+        sda-gpios = <&pro_micro 6 0>;
     };
 };
 
