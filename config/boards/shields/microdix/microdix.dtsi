@@ -45,3 +45,27 @@
 	};
 	
 };
+
+// The PS/2 GPIO and mouse drivers.
+/ {
+    gpio_ps2: gpio_ps2 {
+		status = "disabled";
+        compatible = "gpio-ps2";
+
+        scl-gpios = <&pro_micro 0 0>;
+        sda-gpios = <&pro_micro 6 0>;
+    };
+};
+
+/ {
+    mouse_ps2: mouse_ps2 {
+		status = "disabled";
+        compatible = "zmk,mouse-ps2";
+        ps2-device = <&gpio_ps2>;
+
+        // Uncomment this if you have an extra free pin and
+        // want the controller to perform the Power-On-Reset
+        // instead of using a reset circuit.
+        rst-gpios = <&pro_micro 15 0>;
+    };
+};
