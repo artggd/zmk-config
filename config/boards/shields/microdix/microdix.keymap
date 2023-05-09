@@ -165,7 +165,7 @@ ZMK_LAYER(base_layer,
 	&kp FR_Q				&lt DIAC_RCIRC FR_W		&lt DIAC_ACUTE FR_F			&lt DIAC_RGRAVE FR_P	&lt DIAC_TREMA FR_G				&kp FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&lt DIAC_LCIRC FR_Y		&shft_quote
 	&lh_pht LMETA FR_A		&lh_pht LALT FR_R		&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H		&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht LALT FR_I		&rh_pht RMETA FR_U
 	&lt MOUSE FR_Z			&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K		&kp FR_M 				&kp FR_COMM				&rh_pht RALT FR_SCLN	&mt LSHIFT FR_COLN
-													&lt MEDIA ESC 				&lt NAV SPACE			&lt RSHFT TAB					&lt FUN ENTER	&bs_del_sym				&lt NUM LSHFT
+													&lt MEDIA ESC 				&lt NAV SPACE			&mt RSHFT TAB					&lt FUN ENTER	&bs_del_sym				&lt NUM LSHFT
 )
 ZMK_LAYER(nav_layer,
 	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
