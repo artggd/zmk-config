@@ -1,17 +1,17 @@
-/* french letters */
-zmk_unicode_pair(fr_ae,             ls(n0), ls(n0), e, ls(n6),   ls(n0), ls(n0), c, ls(n6))  // æ/æ
-zmk_unicode_pair(fr_oe,             ls(n0), ls(n1), ls(n5), ls(n3),  ls(n0), ls(n1), ls(n5), ls(n2)) // œ/œ
-zmk_unicode_pair(fr_a_grave,        ls(n0), ls(n0), e, ls(n0),   ls(n0), ls(n0), c, ls(n0))  // à/à
-zmk_unicode_pair(fr_a_circumflex,   ls(n0), ls(n0), e, ls(n2),   ls(n0), ls(n0), c, ls(n2))  // â/â
-zmk_unicode_pair(fr_c_cedilla,      ls(n0), ls(n0), e, ls(n7),   ls(n0), ls(n0), c, ls(n7))  // ç/ç
-zmk_unicode_pair(fr_e_grave,        ls(n0), ls(n0), e, ls(n8),   ls(n0), ls(n0), c, ls(n8))  // è/è
-zmk_unicode_pair(fr_e_acute,        ls(n0), ls(n0), e, ls(n9),   ls(n0), ls(n0), c, ls(n9))  // é/é
-zmk_unicode_pair(fr_e_circumflex,   ls(n0), ls(n0), e, a,    ls(n0), ls(n0), c, a)   // ê/ê
-zmk_unicode_pair(fr_e_diaeresis,    ls(n0), ls(n0), e, b,    ls(n0), ls(n0), c, b)   // ë/ë
-zmk_unicode_pair(fr_i_circumflex,   ls(n0), ls(n0), e, e,    ls(n0), ls(n0), c, e)   // î/î
-zmk_unicode_pair(fr_i_diaeresis,    ls(n0), ls(n0), e, f,    ls(n0), ls(n0), c, f)   // ï/ï
-zmk_unicode_pair(fr_o_circumflex,   ls(n0), ls(n0), f, ls(n4),   ls(n0), ls(n0), d, ls(n4))  // ô/ô
-zmk_unicode_pair(fr_u_grave,        ls(n0), ls(n0), f, ls(n9),   ls(n0), ls(n0), d, ls(n9))  // ù/ù
-zmk_unicode_pair(fr_u_circumflex,   ls(n0), ls(n0), f, b,    ls(n0), ls(n0), d, b)   // û/û
-zmk_unicode_pair(fr_u_diaeresis,    ls(n0), ls(n0), f, c,    ls(n0), ls(n0), d, c)   // ü/ü
-zmk_unicode_pair(fr_y_diaeresis,    ls(n0), ls(n0), f, f,    ls(n0), ls(n1), ls(n7), ls(n8)) // ÿ/ÿ
+/* French letters */
+ZMK_UNICODE_PAIR(fr_ae,             LS(N0), LS(N0), E, LS(N6),   LS(N0), LS(N0), C, LS(N6))  // æ/Æ
+ZMK_UNICODE_PAIR(fr_oe,             LS(N0), LS(N1), LS(N5), LS(N3),  LS(N0), LS(N1), LS(N5), LS(N2)) // œ/Œ
+ZMK_UNICODE_PAIR(fr_a_grave,        LS(N0), LS(N0), E, LS(N0),   LS(N0), LS(N0), C, LS(N0))  // à/À
+ZMK_UNICODE_PAIR(fr_a_circumflex,   LS(N0), LS(N0), E, LS(N2),   LS(N0), LS(N0), C, LS(N2))  // â/Â
+ZMK_UNICODE_PAIR(fr_c_cedilla,      LS(N0), LS(N0), E, LS(N7),   LS(N0), LS(N0), C, LS(N7))  // ç/Ç
+ZMK_UNICODE_PAIR(fr_e_grave,        LS(N0), LS(N0), E, LS(N8),   LS(N0), LS(N0), C, LS(N8))  // è/È
+ZMK_UNICODE_PAIR(fr_e_acute,        LS(N0), LS(N0), E, LS(N9),   LS(N0), LS(N0), C, LS(N9))  // é/É
+ZMK_UNICODE_PAIR(fr_e_circumflex,   LS(N0), LS(N0), E, Q,    LS(N0), LS(N0), C, Q)   // ê/Ê
+ZMK_UNICODE_PAIR(fr_e_diaeresis,    LS(N0), LS(N0), E, B,    LS(N0), LS(N0), C, B)   // ë/Ë
+ZMK_UNICODE_PAIR(fr_i_circumflex,   LS(N0), LS(N0), E, E,    LS(N0), LS(N0), C, E)   // î/Î
+ZMK_UNICODE_PAIR(fr_i_diaeresis,    LS(N0), LS(N0), E, F,    LS(N0), LS(N0), C, F)   // ï/Ï
+ZMK_UNICODE_PAIR(fr_o_circumflex,   LS(N0), LS(N0), F, LS(N4),   LS(N0), LS(N0), D, LS(N4))  // ô/Ô
+ZMK_UNICODE_PAIR(fr_u_grave,        LS(N0), LS(N0), F, LS(N9),   LS(N0), LS(N0), D, LS(N9))  // ù/Ù
+ZMK_UNICODE_PAIR(fr_u_circumflex,   LS(N0), LS(N0), F, B,    LS(N0), LS(N0), D, B)   // û/Û
+ZMK_UNICODE_PAIR(fr_u_diaeresis,    LS(N0), LS(N0), F, C,    LS(N0), LS(N0), D, C)   // ü/Ü
+ZMK_UNICODE_PAIR(fr_y_diaeresis,    LS(N0), LS(N0), F, F,    LS(N0), LS(N1), LS(N7), LS(N8)) // ÿ/Ÿ
