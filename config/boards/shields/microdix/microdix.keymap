@@ -15,7 +15,7 @@
 //#include "helper/mouse.dtsi"
 #include "../../../../zmk-nodefree-config/helper.h"
 #include "../../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
-#include "helper/international_french.dtsi"
+#include "../../../../zmk-nodefree-config/international_chars/french.dtsi"
 
 #define BASE       0
 #define NAV        1
