@@ -172,7 +172,7 @@ ZMK_LAYER(nav_layer,
 )
 ZMK_LAYER(mouse_layer,
 	xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx							xxxxxx			&mwh SCROLL_RIGHT	&mmv MOVE_UP		&mwh SCROLL_LEFT		xxxxxx
-	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LGw(FR_D) 					&caps_word		&mmv MOVE_LEFT	 	&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_DOWN
+	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(FR_D) 					&caps_word		&mmv MOVE_LEFT	 	&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_DOWN
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			&kp LA(LG(FR_X))				xxxxxx			xxxxxx	 			xxxxxx				xxxxxx					&mwh SCROLL_UP
 									U_BTN2 			U_BTN3			U_BTN1							______			______				______
 )
