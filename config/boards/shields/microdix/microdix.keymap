@@ -178,7 +178,7 @@ ZMK_LAYER(mouse_layer,
 )
 ZMK_LAYER(media_layer,
 	&bootloader		&bt BT_CLR		xxxxxx			xxxxxx			xxxxxx					xxxxxx			xxxxxx			xxxxxx				xxxxxx				&bootloader
-	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LCMD(FR_D) 			xxxxxx			&kp C_PREV		&kp C_VOL_DN		&kp C_VOL_UP		&kp C_NEXT
+	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(FR_D) 			xxxxxx			&kp C_PREV		&kp C_VOL_DN		&kp C_VOL_UP		&kp C_NEXT
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 				xxxxxx			xxxxxx			&kp C_BRI_DN		&kp C_BRI_UP		xxxxxx
 									xxxxxx 			xxxxxx			xxxxxx					&kp C_STOP		&kp C_PP		&kp C_MUTE
 )
