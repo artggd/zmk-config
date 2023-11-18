@@ -124,12 +124,12 @@ ZMK_BEHAVIOR(shft_quote, mod_morph,
 // tap -> copy | double-tap -> copy + ctrl+f | triple-tap -> copy + ctrl+t, ctrl+v, enter
 ZMK_BEHAVIOR(ctrl_ctv_td, tap_dance,
 	tapping-term-ms = <175>;
-	bindings = <&kp LC(INS)>, <&kp LC(FR_F)>, <&ctrl_c_t_v>;
+	bindings = <&kp LG(FR_C)>, <&kp LG(FR_F)>, <&ctrl_c_t_v>;
 )
 ZMK_BEHAVIOR(ctrl_c_t_v, macro,
 	wait-ms = <0>;
 	tap-ms = <100>;
-	bindings = <&kp LC(INS)>, <&kp LC(FR_T)>, <&kp LS(INS)>, <&kp ENTER>;
+	bindings = <&kp LG(FR_C)>, <&kp LG(FR_T)>, <&kp LG(FR_V)>, <&kp ENTER>;
 )
 
 // tap -> backspace | rshft + tap: delete | hold: sym layer
@@ -160,43 +160,43 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 
 ZMK_LAYER(base_layer,
 	&kp FR_Q				&lt DIAC_RCIRC FR_W		&lt DIAC_ACUTE FR_F			&lt DIAC_RGRAVE FR_P	&lt DIAC_TREMA FR_G				&kp FR_J		&kp FR_L				&lt DIAC_LGRAVE FR_O	&lt DIAC_LCIRC FR_Y		&shft_quote
-	&lh_pht LMETA FR_A		&lh_pht LALT FR_R		&lh_pht LCTRL FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H		&rh_pht RSHFT FR_N		&rh_pht RCTRL FR_E		&rh_pht LALT FR_I		&rh_pht RMETA FR_U
+	&lh_pht LCTRL FR_A		&lh_pht LALT FR_R		&lh_pht LMETA FR_S			&lh_pht LSHFT FR_T		&kp FR_D 						&kp FR_H		&rh_pht RSHFT FR_N		&rh_pht RMETA FR_E		&rh_pht LALT FR_I		&rh_pht RCTRL FR_U
 	&lt MOUSE FR_Z			&kp FR_X				&c_cedille_ht FR_C FR_C		&kp FR_V				&kp FR_B 						&kp FR_K		&kp FR_M 				&kp FR_COMM				&rh_pht RALT FR_SCLN	&mt LSHIFT FR_COLN
 													&lt MEDIA ESC 				&lt NAV SPACE			&mt LSHFT TAB					&lt FUN ENTER	&bs_del_sym				&lt NUM LSHFT
 )
 ZMK_LAYER(nav_layer,
-	&kp LC(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
-	&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
+	&kp LG(FR_Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LS(INS)		&mt FR_G LG(LS(FR_Z))			xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
+	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(FR_D) 					&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 						xxxxxx				xxxxxx	 			&kp K_CMENU			xxxxxx				&kp PG_DN
 									xxxxxx 			xxxxxx			xxxxxx							______				______				______
 )
 ZMK_LAYER(mouse_layer,
-	&kp LC(FR_Z)	&kp LS(DEL)		&kp LC(INS)		&kp LS(INS)		&mt FR_G LC(LS(FR_Z))			xxxxxx			&mwh SCROLL_RIGHT	&mmv MOVE_UP		&mwh SCROLL_LEFT		xxxxxx
-	&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 					&caps_word		&mmv MOVE_LEFT	 	&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_DOWN
+	xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx							xxxxxx			&mwh SCROLL_RIGHT	&mmv MOVE_UP		&mwh SCROLL_LEFT		xxxxxx
+	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LGw(FR_D) 					&caps_word		&mmv MOVE_LEFT	 	&mmv MOVE_DOWN		&mmv MOVE_RIGHT			&mwh SCROLL_DOWN
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			&kp LA(LG(FR_X))				xxxxxx			xxxxxx	 			xxxxxx				xxxxxx					&mwh SCROLL_UP
 									U_BTN2 			U_BTN3			U_BTN1							______			______				______
 )
 ZMK_LAYER(media_layer,
 	&bootloader		&bt BT_CLR		xxxxxx			xxxxxx			xxxxxx					xxxxxx			xxxxxx			xxxxxx				xxxxxx				&bootloader
-	&kp LMETA 		&kp LALT		&kp LCTRL 		&kp LSHFT 		&kp LC(FR_D) 			xxxxxx			&kp C_PREV		&kp C_VOL_DN		&kp C_VOL_UP		&kp C_NEXT
+	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LCMD(FR_D) 			xxxxxx			&kp C_PREV		&kp C_VOL_DN		&kp C_VOL_UP		&kp C_NEXT
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			xxxxxx	 				xxxxxx			xxxxxx			&kp C_BRI_DN		&kp C_BRI_UP		xxxxxx
 									xxxxxx 			xxxxxx			xxxxxx					&kp C_STOP		&kp C_PP		&kp C_MUTE
 )
 ZMK_LAYER(num_layer,
-	&backticks		&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp FR_BSLS				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
-	&kp FR_PLUS		&kp KP_N4		&kp KP_N5 		&kp KP_N6 		&kp FR_ASTR 			xxxxxx				&kp RSHFT		&kp RCTRL		&kp LALT		&kp RMETA
+	&backticks		&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp FR_BSLS				xxxxxx				xxxxxx			xxxxxx			xxxxxx			xxxxxx
+	&kp FR_PLUS		&kp KP_N4		&kp KP_N5 		&kp KP_N6 		&kp FR_ASTR 			xxxxxx				&kp RSHFT		&kp RMETA		&kp LALT		&kp RCTRL
 	&kp FR_MINS		&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp FR_SLSH				xxxxxx				xxxxxx			xxxxxx			&kp RALT		&to BASE
 									&kp FR_DOT		&kp KP_N0		&kp FR_EQL				xxxxxx				xxxxxx			xxxxxx
 )
 ZMK_LAYER(sym_layer,
-	&kp FR_TILD				&kp FR_PERC		&kp FR_CIRC		&kp FR_UNDS		&squarebrackets				&kp LC(LS(FR_Z))	&kp LS(INS)		&kp LC(INS)		&kp LS(DEL)		&kp LC(FR_Z)
-	&mt FR_PIPE FR_BSLS		&kp FR_AT		&kp FR_DLR 		&kp FR_MINS		&parentheses				xxxxxx				&mo SFT_SYM		&kp RCTRL		&kp LALT		&kp RMETA
+	&kp FR_TILD				&kp FR_PERC		&kp FR_CIRC		&kp FR_UNDS		&squarebrackets				xxxxxx				xxxxxx			xxxxxx			xxxxxx			xxxxxx
+	&mt FR_PIPE FR_BSLS		&kp FR_AT		&kp FR_DLR 		&kp FR_MINS		&parentheses				xxxxxx				&mo SFT_SYM		&kp RMETA		&kp LALT		&kp RCTRL
 	&kp FR_HASH				&kp FR_AMPR		&kp FR_EURO		&kp FR_EQL		&curlybrackets				xxxxxx				xxxxxx			xxxxxx			&kp RALT		&to BASE
 											&kp FR_LABK		&mo NAV			&kp FR_RABK					xxxxxx				xxxxxx			xxxxxx
 )
 ZMK_LAYER(fun_layer,
 	xxxxxx		&kp F7		&kp F8		&kp F9		&kp F12			xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx
-	xxxxxx		&kp F4		&kp F5		&kp F6		&kp F11			xxxxxx			&kp RSHFT		&kp RCTRL		&kp LALT		&kp RMETA
+	xxxxxx		&kp F4		&kp F5		&kp F6		&kp F11			xxxxxx			&kp RSHFT		&kp RMETA		&kp LALT		&kp RCTRL
 	&to BASE	&kp F1		&kp F2		&kp F3		&kp F10			xxxxxx			xxxxxx			xxxxxx			&kp RALT		&to BASE
 							xxxxxx		xxxxxx		&kp PSCRN		xxxxxx			xxxxxx			xxxxxx
 )
