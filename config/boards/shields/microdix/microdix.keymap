@@ -88,7 +88,7 @@ ZMK_BEHAVIOR(curlybrackets, macro,
 ZMK_BEHAVIOR(backticks, macro,
 	wait-ms = <0>;
 	tap-ms = <5>;
-	bindings = <&kp RA(N7)>, <&kp RA(N7)>, <&kp LEFT_ARROW>;
+	bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT_ARROW>;
 )
 
 // tap -> c | hold -> ç | hold + shift -> Ç
