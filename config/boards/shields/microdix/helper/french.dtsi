@@ -1,0 +1,82 @@
+/* French letters */
+ZMK_BEHAVIOR(fr_a_grave, mod_morph,
+	bindings = <&kp FR_AGRV>, <&fr_a_grave_caps>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)  // à/À
+
+ZMK_BEHAVIOR(fr_a_grave_caps, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp CAPSLOCK>, <&kp FR_AGRV>, <&kp CAPSLOCK>;
+)  // À
+
+ZMK_BEHAVIOR(fr_a_circumflex, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp FR_CIRC>, <&kp FR_A>;
+)  // â/Â
+
+ZMK_BEHAVIOR(fr_c_cedilla, mod_morph,
+	bindings = <&kp FR_CCED>, <&kp RA(FR_CCED)>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // ç/Ç
+
+ZMK_BEHAVIOR(fr_e_grave, mod_morph,
+	bindings = <&kp FR_QUOT>, <&kp RA(FR_K)>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // è/È
+
+ZMK_BEHAVIOR(fr_e_acute, mod_morph,
+	bindings = <&kp FR_EACU>, <&fr_eacu_cap>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // é/É
+ZMK_BEHAVIOR(fr_eacu_cap, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp CAPSLOCK>, <&kp FR_EACU>, <&kp CAPSLOCK>;
+)  // É
+
+ZMK_BEHAVIOR(fr_e_circumflex, mod_morph,
+	bindings = <&kp RA(FR_E)>, <&kp RA(RS(FR_E))>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // ê/Ê
+
+ZMK_BEHAVIOR(fr_e_diaeresis, mod_morph,
+	bindings = <&kp RA(FR_EACU)>, <&kp RA(RS(FR_K))>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // ë/Ë
+
+ZMK_BEHAVIOR(fr_i_circumflex, mod_morph,
+	bindings = <&kp RA(FR_I)>, <&kp RA(RS(FR_H))>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // î/Î
+
+ZMK_BEHAVIOR(fr_i_diaeresis, mod_morph,
+	bindings = <&fr_i_diaeresis_min>, <&fr_i_diaeresis_caps>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // ï/Ï
+ZMK_BEHAVIOR(fr_i_diaeresis_min, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp RS(FR_CIRC)>, <&kp FR_I>;
+)  // ï
+ZMK_BEHAVIOR(fr_i_diaeresis_caps, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp RS(FR_CIRC)>, <&kp RS(FR_I)>;
+)  // Ï
+
+ZMK_BEHAVIOR(fr_o_circumflex, mod_morph,
+	bindings = <&kp RA(FR_CIRC)>, <&kp RA(RS(FR_CIRC))>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // ô/Ô
+
+ZMK_BEHAVIOR(fr_u_circumflex, mod_morph,
+	bindings = <&fr_u_circumflex_min>, <&kp RA(RS(FR_EXLM))>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+) // û/Û
+ZMK_BEHAVIOR(fr_u_circumflex_min, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp FR_CIRC>, <&kp FR_U>;
+)  // û
