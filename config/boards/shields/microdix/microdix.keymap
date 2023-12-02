@@ -122,6 +122,24 @@ ZMK_BEHAVIOR(shft_quote, mod_morph,
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+// tap -> ",", shift tap -> "?"
+ZMK_BEHAVIOR(shft_quote, mod_morph,
+	bindings = <&kp QUOTE>, <&kp QMARK>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> ";", shift tap -> "."
+ZMK_BEHAVIOR(shft_quote, mod_morph,
+	bindings = <&kp SEMI>, <&kp DOT>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> ":", shift tap -> "/"
+ZMK_BEHAVIOR(shft_quote, mod_morph,
+	bindings = <&kp COLON>, <&kp SLASH>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 // tap -> copy | double-tap -> copy + ctrl+f | triple-tap -> copy + ctrl+t, ctrl+v, enter
 ZMK_BEHAVIOR(ctrl_ctv_td, tap_dance,
 	tapping-term-ms = <175>;
