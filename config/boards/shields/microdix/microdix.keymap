@@ -123,19 +123,19 @@ ZMK_BEHAVIOR(shft_quote, mod_morph,
 )
 
 // tap -> ",", shift tap -> "?"
-ZMK_BEHAVIOR(shft_quote, mod_morph,
+ZMK_BEHAVIOR(fr_comma, mod_morph,
 	bindings = <&kp COMMA>, <&kp QMARK>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // tap -> ";", shift tap -> "."
-ZMK_BEHAVIOR(shft_quote, mod_morph,
+ZMK_BEHAVIOR(fr_semi, mod_morph,
 	bindings = <&kp SEMI>, <&kp DOT>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // tap -> ":", shift tap -> "/"
-ZMK_BEHAVIOR(shft_quote, mod_morph,
+ZMK_BEHAVIOR(fr_colon, mod_morph,
 	bindings = <&kp COLON>, <&kp SLASH>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -180,7 +180,7 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 ZMK_LAYER(base_layer,
 	&kp Q				&lt DIAC_RCIRC W	&lt DIAC_ACUTE F		&lt DIAC_RGRAVE P	&lt DIAC_TREMA G			&kp J			&kp L				&lt DIAC_LGRAVE O	&lt DIAC_LCIRC Y	&shft_quote
 	&lh_pht LCTRL A		&lh_pht LALT R		&lh_pht LMETA S			&lh_pht LSHFT T		&kp D 						&kp H			&rh_pht RSHFT N		&rh_pht RMETA E		&rh_pht LALT I		&rh_pht RCTRL U
-	&lt MOUSE Z			&kp X				&c_cedille_ht C C		&kp V				&kp B 						&kp K			&kp M 				&kp COMMA			&rh_pht RALT SEMI	&mt LSHIFT COLON
+	&lt MOUSE Z			&kp X				&c_cedille_ht C C		&kp V				&kp B 						&kp K			&kp M 				&fr_comma			&fr_semi        	&fr_colon
 											&lt MEDIA ESC 			&lt NAV SPACE		&mt LSHFT TAB				&lt FUN ENTER	&bs_del_sym			&lt NUM LSHFT
 )
 ZMK_LAYER(nav_layer,
