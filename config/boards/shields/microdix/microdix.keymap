@@ -124,7 +124,7 @@ ZMK_BEHAVIOR(shft_quote, mod_morph,
 
 // tap -> ",", shift tap -> "?"
 ZMK_BEHAVIOR(shft_quote, mod_morph,
-	bindings = <&kp QUOTE>, <&kp QMARK>;
+	bindings = <&kp COMMA>, <&kp QMARK>;
 	mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
