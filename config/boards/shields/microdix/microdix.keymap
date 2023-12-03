@@ -214,10 +214,10 @@ ZMK_LAYER(sym_layer,
 											&kp LT			&mo NAV			&kp GT					xxxxxx				xxxxxx			xxxxxx
 )
 ZMK_LAYER(fun_layer,
-	xxxxxx		&kp F7		&kp F8		&kp F9		&kp F12			xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx
-	xxxxxx		&kp F4		&kp F5		&kp F6		&kp F11			xxxxxx			&kp RSHFT		&kp RMETA		&kp LALT		&kp RCTRL
-	&to BASE	&kp F1		&kp F2		&kp F3		&kp F10			xxxxxx			xxxxxx			xxxxxx			&kp RALT		&to BASE
-							xxxxxx		xxxxxx		&kp PSCRN		xxxxxx			xxxxxx			xxxxxx
+	xxxxxx		&kp F7		&kp F8		&kp F9		&kp F12			    xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx
+	xxxxxx		&kp F4		&kp F5		&kp F6		&kp F11		    	xxxxxx			&kp RSHFT		&kp RMETA		&kp LALT		&kp RCTRL
+	&to BASE	&kp F1		&kp F2		&kp F3		&kp F10		    	xxxxxx			xxxxxx			xxxxxx			&kp RALT		&to BASE
+							xxxxxx		xxxxxx		&kp RG(RS(N4))		xxxxxx			xxxxxx			xxxxxx
 )
 ZMK_LAYER(sft_sym_layer,
 	xxxxxx		xxxxxx		xxxxxx		&kp LBKT		&kp RBKT				xxxxxx		xxxxxx		xxxxxx		xxxxxx		xxxxxx
