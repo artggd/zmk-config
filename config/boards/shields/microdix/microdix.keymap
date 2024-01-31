@@ -184,8 +184,8 @@ ZMK_LAYER(base_layer,
 											&lt MEDIA ESC 			&lt NAV SPACE		&mt LSHFT TAB				&lt FUN ENTER	&bs_del_sym			&lt NUM LSHFT
 )
 ZMK_LAYER(nav_layer,
-	&kp LG(Z)	&kp LS(DEL)		&ctrl_ctv_td	&kp LG(V)		&mt G LG(LS(Z))				xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
-	&kp LCTRL 	&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(D) 				&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
+	&kp LG(Z)	&kp LG(X)		&ctrl_ctv_td	&mt F11 LG(V)	&kp LG(LS(Z))				xxxxxx				&kp HOME			&kp UP_ARROW		&kp END				xxxxxx
+	&kp LCTRL 	&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(D) 			    	&kp CAPSLOCK		&kp LEFT_ARROW		&kp DOWN_ARROW		&kp RIGHT_ARROW		&kp PG_UP
 	&to BASE	&kp RALT		xxxxxx			xxxxxx			xxxxxx	 					xxxxxx				xxxxxx	 			&kp K_CMENU			xxxxxx				&kp PG_DN
 								xxxxxx 			xxxxxx			xxxxxx						______				______				______
 )
