@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/mouse_settings.h>
 // Enable Mouse Keys
 #include "include/mouse_tp.dtsi"
+#include "include/mouse_keys.dtsi"
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/36.h"
 #include "zmk-helpers/unicode-chars/french.dtsi"
