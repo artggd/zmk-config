@@ -192,7 +192,7 @@ ZMK_LAYER(mouse_tp_layer,
 	xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx						xxxxxx			&msc SCRL_RIGHT		&mmv MOVE_UP		&msc SCRL_LEFT		xxxxxx
 	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(D) 					&caps_word		&mmv MOVE_LEFT		&mmv MOVE_DOWN		&mmv MOVE_RIGHT		&msc SCRL_DOWN
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			&kp LA(LG(X))				xxxxxx			xxxxxx				xxxxxx				xxxxxx				&msc SCRL_UP
-									RCLK 			MCLK			LCLK						______			______		______
+									&mkp RCLK 		&mkp MCLK		&mkp LCLK					______			______		______
 )
 ZMK_LAYER(media_layer,
 	&bootloader		&bt BT_CLR		xxxxxx			xxxxxx			xxxxxx				xxxxxx			xxxxxx			xxxxxx				xxxxxx				&bootloader
