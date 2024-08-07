@@ -75,18 +75,13 @@
     */
 
     &mouse_ps2_input_listener {
-
-      // Adjust pointing device axes.
-      // This adjusts the values inside the zmk driver. Some
-      // trackpoints also allow you to adjust it in their firmware. Check
-      // the driver options below for more info.
-      // xy-swap;
-      // x-invert;
-      // y-invert;
+      xy-swap;
+      x-invert;
+      y-invert;
 
       // Set the layer that should automatically activate when the mouse is
       // moving.
-      layer-toggle = <MOUSE>;
+      layer-toggle = <MOUSE_TP>;
 
       // How long the mouse needs to move for before the layer is activated (to
       // avoid accidental activations while typing) (Default: 250)
@@ -105,17 +100,16 @@
     &mouse_ps2 {
 
       // How sensitive the TP is (Default: 128)
-      // tp-sensitivity = <128>;
+      tp-sensitivity = <135>;
 
 
       // The maximum mouse movement speed the TP will accelarate to
       // (Default: 97)
-      // tp-val6-upper-speed = <97>;
+      tp-val6-upper-speed = <182>;
 
 
-      // Negative Inertia (Default: 6)
-      // Makes the TP feel more responsive and "overshoot" less.
-      // tp-neg-inertia = <6>;
+      // Not quite sure what it does tbh :) (Default: 6)
+      tp-neg-inertia = <6>;
 
 
       // Enable clicking by tapping on the TP.
@@ -167,8 +161,8 @@
     // So,they are never compiled into the firmware.
     //
     // Here we enable them, but we do it within the #ifdef HAS_MOUSE_TP code
-    // block, which prevents compilation and potential build errors when we
-    // undefine HAS_MOUSE_TP in corne_tp.keymap
+    // block, which allows to prevent compilation and potential build errors
+    // when we undefine HAS_MOUSE_TP in corne_tp.keymap
     &mouse_ps2  {
       status = "okay";
     };

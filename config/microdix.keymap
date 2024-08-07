@@ -27,7 +27,7 @@
 
 #define BASE       0
 #define NAV        1
-#define MOUSE      2
+#define MOUSE_TP   2
 #define MEDIA      3
 #define NUM        4
 #define SYM        5
@@ -44,7 +44,6 @@
 #define CAMEL_CASE 16
 #define SNAKE_CASE 17
 #define KEBAB_CASE 18
-#define MOUSE_SET 19
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
