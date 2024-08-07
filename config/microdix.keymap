@@ -179,7 +179,7 @@ ZMK_BEHAVIOR(rh_pht, hold_tap,  // right-hand HRMs
 ZMK_LAYER(base_layer,
 	&kp Q				&lt DIAC_RCIRC W	&lt DIAC_ACUTE F		&lt DIAC_RGRAVE P	&lt DIAC_TREMA G			&kp J			&kp L				&lt DIAC_LGRAVE O	&lt DIAC_LCIRC Y	&shft_quote
 	&lh_pht LCTRL A		&lh_pht LALT R		&lh_pht LMETA S			&lh_pht LSHFT T		&kp D 						&kp H			&rh_pht RSHFT N		&rh_pht RMETA E		&rh_pht LALT I		&rh_pht RCTRL U
-	&lt MOUSE Z			&kp X				&c_cedille_ht C C		&kp V				&kp B 						&kp K			&kp M 				&fr_comma			&fr_semi        	&fr_colon
+	&lt MOUSE_TP Z			&kp X				&c_cedille_ht C C		&kp V				&kp B 						&kp K			&kp M 				&fr_comma			&fr_semi        	&fr_colon
 											&lt MEDIA ESC 			&lt NAV SPACE		&mt LSHFT TAB				&lt FUN ENTER	&bs_del_sym			&lt NUM LSHFT
 )
 ZMK_LAYER(nav_layer,
@@ -188,7 +188,7 @@ ZMK_LAYER(nav_layer,
 	&to BASE	&kp RALT		xxxxxx			xxxxxx			xxxxxx	 					xxxxxx				xxxxxx	 			&kp K_CMENU			xxxxxx				&kp PG_DN
 								xxxxxx 			xxxxxx			xxxxxx						______				______				______
 )
-ZMK_LAYER(mouse_layer,
+ZMK_LAYER(mouse_tp_layer,
 	xxxxxx			xxxxxx			xxxxxx			xxxxxx			xxxxxx						xxxxxx			&msc SCRL_RIGHT		&mmv MOVE_UP		&msc SCRL_LEFT		xxxxxx
 	&kp LCTRL 		&kp LALT		&kp LMETA 		&kp LSHFT 		&kp LG(D) 					&caps_word		&mmv MOVE_LEFT		&mmv MOVE_DOWN		&mmv MOVE_RIGHT		&msc SCRL_DOWN
 	&to BASE		&kp RALT		xxxxxx			xxxxxx			&kp LA(LG(X))				xxxxxx			xxxxxx				xxxxxx				xxxxxx				&msc SCRL_UP
@@ -228,7 +228,7 @@ ZMK_LAYER(lyr_lck_layer,
 	______		______		______			______		______					______		______		______		______		______
 	______		______		______			______		______					______		______		______		______		______
 	______		______		______			______		______					______		______		______		______		______
-							&to MEDIA 		&to NAV		&to MOUSE 				&to NUM		&to SYM		______
+							&to MEDIA 		&to NAV		&to MOUSE_TP 				&to NUM		&to SYM		______
 )
 ZMK_LAYER(diac_acute,
 	______		______		______		xxxxxx		______				______		______		______			______		______
