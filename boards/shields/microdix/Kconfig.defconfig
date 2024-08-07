@@ -1,12 +1,11 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
+# The side with the PS2 Mouse / TP has to be the central half
 
 if SHIELD_MICRODIX_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "Microdix-TP"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 endif
 
