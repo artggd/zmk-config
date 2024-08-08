@@ -1,0 +1,14 @@
+#undef COMBO_TERM
+#define COMBO_TERM 50
+
+// y + ' -> !
+ZMK_COMBO(combo_exlm, &kp EXCL, RT3 RT4, BASE)
+
+// , + ; -> middle dot
+ZMK_COMBO(combo_middle_dot, &middle_dot, RB2 RB3, BASE)
+
+// combo fun layer
+ZMK_COMBO(combo_fun_layer, &mo FUN, LH0 RH0, BASE)
+
+// combo scroll lock (compose key)
+ZMK_COMBO(combo_compose_key, &kp SCROLLLOCK, LB2 LB1, BASE)
