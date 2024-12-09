@@ -1,0 +1,5 @@
+// middle dot
+ZMK_UNICODE_SINGLE(middle_dot, N0, N0, B, N7)
+
+// euro
+ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)

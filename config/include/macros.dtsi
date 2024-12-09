@@ -1,0 +1,21 @@
+// open / close brackets
+ZMK_BEHAVIOR(parentheses, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT_ARROW>;
+)
+ZMK_BEHAVIOR(squarebrackets, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT_ARROW>;
+)
+ZMK_BEHAVIOR(curlybrackets, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT_ARROW>;
+)
+ZMK_BEHAVIOR(backticks, macro,
+	wait-ms = <0>;
+	tap-ms = <5>;
+	bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT_ARROW>;
+)

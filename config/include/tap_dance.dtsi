@@ -1,0 +1,47 @@
+// tap -> c | hold -> ç | hold + shift -> Ç
+ZMK_BEHAVIOR(c_cedille_ht, hold_tap,
+	flavor = "tap-preferred";
+	tapping-term-ms = <175>;
+	bindings = <&fr_c_cedilla>, <&kp>;
+)
+
+// tap -> ', shift tap -> "
+ZMK_BEHAVIOR(shft_quote, mod_morph,
+	bindings = <&kp SQT>, <&kp DQT>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> ",", shift tap -> "?"
+ZMK_BEHAVIOR(fr_comma, mod_morph,
+	bindings = <&kp COMMA>, <&kp QMARK>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> ";", shift tap -> "."
+ZMK_BEHAVIOR(fr_semi, mod_morph,
+	bindings = <&kp SEMI>, <&kp DOT>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> ":", shift tap -> "/"
+ZMK_BEHAVIOR(fr_colon, mod_morph,
+	bindings = <&kp COLON>, <&kp SLASH>;
+	mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap -> copy | double-tap -> copy + ctrl+f | triple-tap -> copy + ctrl+t, ctrl+v, enter
+ZMK_BEHAVIOR(ctrl_ctv_td, tap_dance,
+	tapping-term-ms = <175>;
+	bindings = <&kp LG(C)>, <&kp LG(F)>, <&ctrl_c_t_v>;
+)
+ZMK_BEHAVIOR(ctrl_c_t_v, macro,
+	wait-ms = <0>;
+	tap-ms = <100>;
+	bindings = <&kp LG(C)>, <&kp LG(T)>, <&kp LG(V)>, <&kp ENTER>;
+)
+
+// tap -> backspace | rshft + tap: delete | hold: sym layer
+ZMK_BEHAVIOR(bs_del_sym, mod_morph,
+    bindings = <&lt SYM BSPC>, <&kp DEL>;
+    mods = <(MOD_RSFT)>;
+)
