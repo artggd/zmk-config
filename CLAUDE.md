@@ -65,6 +65,7 @@ west build -b nice_nano_v2 -- -DSHIELD=microdix_right
 - Update the layer index defines if adding/removing layers
 - Test both halves after matrix changes
 - Check combo positions match actual key positions
+- **Update README.md** with the new layer ASCII art diagrams to keep documentation in sync
 
 ### When Changing Hardware Pins
 - Update both left and right overlays if needed
