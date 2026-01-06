@@ -1,8 +1,8 @@
 # Artggd ZMK Config
 
-## Layers
+A 36 key layout designed for efficient typing in English, French and for programming.
 
-The layout has 13 layers designed for efficient typing in English, French and programming.
+## Layers
 
 ### Layer 0: BASE (Colemak-DH inspired)
 
