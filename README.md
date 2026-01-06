@@ -4,7 +4,7 @@ A 36 key layout designed for efficient typing in English, French and for program
 
 ## Layers
 
-### Layer 0: BASE (Colemak-DH inspired)
+### Layer 0: BASE (Colemak inspired)
 
 Home row mods: ⌃/⌥/⌘/⇧ on home row (tap for letter, hold for modifier).
 
@@ -16,7 +16,7 @@ Home row mods: ⌃/⌥/⌘/⇧ on home row (tap for letter, hold for modifier).
 ├───────┼───────┼───────┼───────┼───────┤  ├───────┼───────┼───────┼───────┼───────┤
 │   Z   │   X   │  C/ç  │   V   │   B   │  │   K   │   M   │  ,/?  │  ;/.  │  ://  │
 ╰───────┴───────├───────┼───────┼───────┤  ├───────┼───────┼───────┼───────┴───────╯
-                │ESC/Med│SPC/Nav│TAB/⇧ │  │ENT/Fun│BS/Sym │  Num  │
+                │ESC/Med│SPC/Nav│ TAB/⇧ │  │ENT/Fun│BS/Sym │  Num  │
                 ╰───────┴───────┴───────╯  ╰───────┴───────┴───────╯
 ```
 
@@ -265,7 +265,7 @@ Activated by holding G on the base layer. Provides ë, ï, ü, ÿ.
 
 | Layer | # | Activation | Purpose |
 |-------|---|------------|---------|
-| BASE | 0 | Default | Main typing layer (Colemak-DH inspired) |
+| BASE | 0 | Default | Main typing layer (Colemak inspired) |
 | NAV | 1 | Hold Space | Navigation, arrows, clipboard |
 | MEDIA | 2 | Hold Escape | Media controls, Bluetooth, bootloader |
 | NUM | 3 | Hold right thumb | Number pad with operators |
