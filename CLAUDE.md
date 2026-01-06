@@ -6,7 +6,6 @@ This is a ZMK firmware configuration for a custom **Microdix** split mechanical 
 
 - **Keyboard**: Microdix - 36-key ergonomic split layout
 - **MCU**: Nice!Nano v2 (Bluetooth enabled)
-- **Special**: PS/2 TrackPoint integrated on right half
 - **Split Configuration**: Right half is the central controller
 
 ## Project Structure
@@ -14,13 +13,12 @@ This is a ZMK firmware configuration for a custom **Microdix** split mechanical 
 ```
 boards/shields/microdix/   # Hardware definitions (matrix, pins, overlays)
 config/
-├── microdix.keymap        # Main keymap (9 layers)
-├── microdix.conf          # Firmware settings (BLE, debounce, mouse)
+├── microdix.keymap        # Main keymap (12 layers)
+├── microdix.conf          # Firmware settings (BLE, debounce)
 ├── west.yml               # Dependencies (ZMK forks, modules)
 └── include/               # Modular configuration
     ├── settings.dtsi      # Global behaviors
     ├── homerow_mod.dtsi   # Home row mods
-    ├── mouse_tp.dtsi      # TrackPoint configuration
     ├── combos.dtsi        # Key combos
     ├── macros.dtsi        # Custom macros
     └── ...
@@ -32,20 +30,18 @@ config/
 |-------|------|---------|
 | 0 | BASE | Main QWERTY-inspired layout |
 | 1 | NAV | Navigation (arrows, home, end, page up/down) |
-| 2 | MOUSE_TP | TrackPoint mouse control |
-| 3 | MEDIA | Media controls, Bluetooth, bootloader |
-| 4 | NUM | Number pad |
-| 5 | SYM | Symbols |
-| 6 | FUN | Function keys |
-| 7 | SFT_SYM | Shifted symbols |
-| 8+ | DIAC_* | French diacritical marks |
+| 2 | MEDIA | Media controls, Bluetooth, bootloader |
+| 3 | NUM | Number pad |
+| 4 | SYM | Symbols |
+| 5 | FUN | Function keys |
+| 6 | SFT_SYM | Shifted symbols |
+| 7+ | DIAC_* | French diacritical marks |
 
 ## Key Configuration Files
 
 - **Pin assignments**: `boards/shields/microdix/microdix.dtsi` and overlays
 - **Debounce tuning**: `config/microdix.conf` (CONFIG_ZMK_KSCAN_DEBOUNCE_*)
 - **Bluetooth settings**: `config/microdix.conf`
-- **TrackPoint settings**: `config/include/mouse_tp.dtsi`
 
 ## Building
 
@@ -76,5 +72,5 @@ west build -b nice_nano_v2 -- -DSHIELD=microdix_right
 - Test debounce settings after pin changes
 
 ### Dependencies
-- Main ZMK fork: `infused-kim/zmk` (mouse PS2 + urob improvements)
+- Main ZMK fork: `infused-kim/zmk` (urob improvements)
 - Additional modules defined in `config/west.yml`

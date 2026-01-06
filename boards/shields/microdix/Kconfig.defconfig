@@ -1,5 +1,3 @@
-# The side with the PS2 Mouse / TP has to be the central half
-
 if SHIELD_MICRODIX_RIGHT
 
 config ZMK_KEYBOARD_NAME

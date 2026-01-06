@@ -61,17 +61,6 @@ manifest:
     # Additional zmk modules
     #
 
-    # Module for PS/2 mouse & TP driver
-    - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
-      revision: main
-
-    # Badjeff's input listener that can turn mouse movement
-    # into scroll movement
-    - name: zmk-input-behavior-listener
-      remote: badjeff
-      revision: main
-
     # Urob's zmk helpers that contain key position defines
     - name: zmk-helpers
       remote: urob
