@@ -72,5 +72,5 @@ west build -b nice_nano_v2 -- -DSHIELD=microdix_right
 - Test debounce settings after pin changes
 
 ### Dependencies
-- Main ZMK fork: `infused-kim/zmk` (urob improvements)
+- Main ZMK fork: `urob/zmk`
 - Additional modules defined in `config/west.yml`
